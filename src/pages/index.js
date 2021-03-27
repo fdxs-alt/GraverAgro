@@ -1,41 +1,27 @@
-import { Layout } from '@components'
-import styled from 'styled-components'
+import { Layout, HomeStyles } from '@components'
 import Link from 'next/link'
 
-const Container = styled.section`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-`
-
-const RightImage = styled.div`
-  width: 100%;
-  height: 50%;
-  background-image: url('/excavator.jpg');
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-`
-
-const LeftImage = styled.div`
-  width: 100%;
-  height: 50%;
-  background-image: url('/tractor.jpg');
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-`
+const { AgroLogo, Container, Image, TextInfo, GraverLogo } = HomeStyles
 
 const Home = () => {
   return (
     <Layout title="AGROMIŚ GRAVER | Wybierz usługę">
       <Container>
         <Link href="/agromis">
-          <LeftImage />
+          <Image style={{ backgroundImage: `url('/tractor.jpg')` }}>
+            <AgroLogo src="/agro.png" width="500px" height="300px" />
+          </Image>
         </Link>
+        <TextInfo>Wybierz interesującą Cię usługę:</TextInfo>
         <Link href="/graver">
-          <RightImage />
+          <Image
+            style={{
+              backgroundImage: `url('/excavator.jpg')`,
+              backgroundPosition: 'bottom',
+            }}
+          >
+            <GraverLogo src="/graver.png" alt="graver" />
+          </Image>
         </Link>
       </Container>
     </Layout>

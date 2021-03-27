@@ -3,7 +3,7 @@ import reset from 'styled-reset'
 
 const GlobalStyles = createGlobalStyle`
  ${reset}
- * {
+ *, ::after, ::before {
      padding:0;
      margin: 0;
      box-sizing: border-box;
@@ -17,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
      width: 100%;
      height: 100%;
      font-family: 'Barlow', sans-serif;
+     background-color: ${(props) => props.theme.colors.white};
  } 
 `
 
