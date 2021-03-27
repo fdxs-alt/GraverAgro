@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
+import { useScrollHeight } from '@utils'
 
 const NavContainer = styled.nav`
   width: 100%;
@@ -9,6 +10,11 @@ const NavContainer = styled.nav`
   border-bottom: 3px solid #900000;
   display: flex;
   align-self: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: white;
+  transition: all 400ms ease;
 `
 
 const Logo = styled.img`
@@ -44,8 +50,10 @@ const NavItem = styled.li`
 `
 
 const Navbar = () => {
+  const height = useScrollHeight()
+
   return (
-    <NavContainer>
+    <NavContainer style={{ height: height > 150 ? '85px' : '150px' }}>
       <NavLinks>
         <Link href="/graver/#about">
           <NavItem>O nas</NavItem>

@@ -61,7 +61,7 @@ const Inner = styled.div`
 `
 
 const Info = styled.h2`
-  font-size: 34px;
+  font-size: 38px;
   font-weight: 700;
   text-align: center;
   margin-bottom: 70px;

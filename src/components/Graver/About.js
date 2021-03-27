@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
+import { useOffset } from '@utils'
 
 const icons = ['/drill.png', '/excavator_1.png', '/excavator_2.png']
 
@@ -13,6 +14,7 @@ const Container = styled.section`
   justify-content: center;
   position: relative;
   z-index: 1;
+  overflow: hidden;
   &::before {
     position: absolute;
     content: '';
@@ -24,7 +26,6 @@ const Container = styled.section`
 
 const AboutImage = styled.img`
   width: 100%;
-  height: 100%;
   object-fit: cover;
   object-position: center;
   position: absolute;
@@ -64,16 +65,22 @@ const IconContainer = styled.div`
 `
 
 const About = () => {
+  const offset = useOffset()
+
   return (
     <Container id="about">
-      <AboutImage src="./onas.jpg" alt="O nas" />
+      <AboutImage
+        src="./onas.jpg"
+        alt="O nas"
+        style={{ transform: `translateY(${offset * 0.6}px)` }}
+      />
       <AboutInfo>
         <IconContainer>
           {icons.map((icon, i) => (
             <Image
               src={icon}
-              width="70px"
-              height="70px"
+              width="75px"
+              height="75px"
               key={i}
               loading="lazy"
             />
