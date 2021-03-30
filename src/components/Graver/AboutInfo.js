@@ -36,7 +36,7 @@ const AboutText = styled.div`
 
   background-color: ${(props) => props.theme.colors.white};
   p {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.5;
     text-align: justify;
     margin: 10px 0;
@@ -49,6 +49,8 @@ const ExcavatorImage = styled.img`
   transform: scaleX(-1);
   top: 250px;
   left: 50%;
+  width: 100%;
+  max-width: 1400px;
   z-index: -10;
 `
 

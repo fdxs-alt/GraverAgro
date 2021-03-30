@@ -5,7 +5,7 @@ import { useScrollHeight } from '@utils'
 
 const NavContainer = styled.nav`
   width: 100%;
-  height: 120px;
+  height: 100px;
   padding: 10px 50px;
   display: flex;
   align-self: center;
@@ -38,7 +38,7 @@ const NavItem = styled.li`
   text-align: center;
   list-style: none;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 22px;
   transition: transform 300ms ease;
   cursor: pointer;
   color: white !important;
