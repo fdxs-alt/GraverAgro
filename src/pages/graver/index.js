@@ -1,12 +1,12 @@
 import React from 'react'
-import { Layout, Navbar, About, Services } from '@components'
+import { Layout, Navbar, About, AboutInfo } from '../../components'
 
 const Graver = () => {
   return (
     <Layout title="Graver">
       <Navbar />
-      <About />
-      <Services />
+      <About isMain />
+      <AboutInfo />
     </Layout>
   )
 }

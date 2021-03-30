@@ -6,15 +6,16 @@ import { useScrollHeight } from '@utils'
 const NavContainer = styled.nav`
   width: 100%;
   height: 120px;
-  padding: 10px;
-  border-bottom: 3px solid #900000;
+  padding: 10px 50px;
   display: flex;
   align-self: center;
-  position: sticky;
+  position: absolute;
   top: 0;
   z-index: 999;
-  background-color: white;
   transition: all 400ms ease;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
 `
 
 const Logo = styled.img`
@@ -26,26 +27,27 @@ const Logo = styled.img`
 const NavLinks = styled.div`
   margin: auto;
   width: 100%;
-  max-width: 1200px;
-  justify-content: space-between;
+  max-width: 1500px;
   align-items: center;
   display: flex;
+  justify-content: flex-end;
 `
 
 const NavItem = styled.li`
-  width: 150px;
+  width: 175px;
   text-align: center;
   list-style: none;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 24px;
   transition: transform 300ms ease;
   cursor: pointer;
+  color: white !important;
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
   a {
     text-decoration: none;
-    color: black;
+    color: white;
   }
 `
 
@@ -53,25 +55,29 @@ const Navbar = () => {
   const height = useScrollHeight()
 
   return (
-    <NavContainer style={{ height: height > 150 ? '85px' : '150px' }}>
+    <NavContainer
+      style={{
+        position: height > 150 ? 'fixed' : 'absolute',
+        backgroundColor: height > 150 && 'rgba(0,0,0,0.75)',
+      }}
+    >
+      <Link href="/graver">
+        <Logo src="/graver.png" />
+      </Link>
       <NavLinks>
-        <Link href="/graver/#about">
+        <Link href="/graver">
           <NavItem>O nas</NavItem>
         </Link>
-
-        <Link href="/graver/#services">
+        <Link href="/graver/uslugi">
           <NavItem>Usługi</NavItem>
         </Link>
-
-        <Link href="/graver">
-          <Logo src="/graver.png" />
-        </Link>
-
-        <Link href="/graver/#contact">
+        <Link href="/graver/kontakt">
           <NavItem>Kontakt</NavItem>
         </Link>
-
-        <Link href="/graver/#gallery">
+        <Link href="/graver/park-maszyn">
+          <NavItem>Park maszyn</NavItem>
+        </Link>
+        <Link href="/graver/galeria">
           <NavItem>Galeria</NavItem>
         </Link>
       </NavLinks>

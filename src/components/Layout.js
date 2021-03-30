@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 import { NextSeo } from 'next-seo'
 
-const Main = styled.main``
+const Main = styled.main`
+  overflow: hidden;
+`
 
 const Layout = ({ children, title = 'GraverAgro' }) => {
   return (
