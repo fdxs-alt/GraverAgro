@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, Navbar, About, AboutServices } from '@components'
+import { Layout, Navbar, About, AboutServices, Footer } from '@components'
 
 const Services = () => {
   return (
@@ -7,6 +7,7 @@ const Services = () => {
       <Navbar />
       <About name="Usługi" />
       <AboutServices />
+      <Footer />
     </Layout>
   )
 }

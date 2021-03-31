@@ -1,5 +1,12 @@
 import React from 'react'
-import { Layout, Navbar, About, AboutInfo } from '../../components'
+import {
+  Layout,
+  Navbar,
+  About,
+  AboutInfo,
+  Find,
+  Footer,
+} from '../../components'
 
 const Graver = () => {
   return (
@@ -7,6 +14,8 @@ const Graver = () => {
       <Navbar />
       <About isMain />
       <AboutInfo />
+      <Find />
+      <Footer />
     </Layout>
   )
 }

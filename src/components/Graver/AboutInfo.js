@@ -64,6 +64,11 @@ const AboutInfo = () => {
         <p>{text2}</p>
       </AboutText>
       <ExcavatorImage alt="koparka" src="/excavator.png" />
+      <Divider
+        src="/divider.svg"
+        alt="divider"
+        style={{ marginTop: '250px' }}
+      />
     </Container>
   )
 }
