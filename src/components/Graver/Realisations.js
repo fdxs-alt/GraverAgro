@@ -5,10 +5,10 @@ const Wrapper = styled.section`
   width: 100%;
   margin: 100px auto;
   h2 {
-    font-size: 52px;
+    font-size: 34px;
     font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
     text-align: center;
   }
 `
@@ -30,7 +30,7 @@ const RealisationImage = styled.img`
 const Realisations = () => {
   return (
     <Wrapper>
-      <h2>Galeria zdjęć</h2>
+      <h2>Sprawdź jak realizowaliśmy nasze usługi</h2>
       <ImageWrapper>
         {Array(10)
           .fill(1)

@@ -33,7 +33,7 @@ const AboutText = styled.div`
   padding: 30px;
   z-index: 10;
   box-shadow: 5px 4px 39px 0px rgba(0, 0, 0, 0.08);
-
+  margin-bottom: 100px;
   background-color: ${(props) => props.theme.colors.white};
   p {
     font-size: 20px;
@@ -64,11 +64,6 @@ const AboutInfo = () => {
         <p>{text2}</p>
       </AboutText>
       <ExcavatorImage alt="koparka" src="/excavator.png" />
-      <Divider
-        src="/divider.svg"
-        alt="divider"
-        style={{ marginTop: '250px' }}
-      />
     </Container>
   )
 }

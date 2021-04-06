@@ -4,9 +4,7 @@ import {
   Navbar,
   About,
   AboutInfo,
-  Find,
   Footer,
-  Realisations,
   IconsSection,
 } from '../../components'
 
@@ -17,8 +15,6 @@ const Graver = () => {
       <About isMain />
       <IconsSection />
       <AboutInfo />
-      <Find />
-      <Realisations />
       <Footer />
     </Layout>
   )
