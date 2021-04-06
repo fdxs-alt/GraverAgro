@@ -7,7 +7,7 @@ const Wrapper = styled.footer`
   padding: 60px;
   width: 100%;
   background-color: #262626;
-  margin-top: 200px;
+  margin-top: 50px;
   display: flex;
 `
 const InnerWrapper = styled.ul`

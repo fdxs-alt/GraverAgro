@@ -46,6 +46,7 @@ const ColumnWrapper = styled.div`
     font-size: 24px;
     margin-top: 15px;
     font-weight: 500;
+    padding: 5px 0;
   }
   h4 {
     font-size: 28px;

@@ -6,6 +6,8 @@ import AboutInfo from './Graver/AboutInfo'
 import AboutServices from './Graver/Services/AboutServices'
 import Find from './Graver/Find'
 import Footer from './Graver/Footer'
+import Realisations from './Graver/Realisations'
+import IconsSection from './Graver/IconsSection'
 
 export {
   Layout,
@@ -16,4 +18,6 @@ export {
   AboutServices,
   Find,
   Footer,
+  Realisations,
+  IconsSection,
 }

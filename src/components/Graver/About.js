@@ -16,7 +16,7 @@ const Container = styled.section`
     content: '';
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.6);
   }
 `
 
@@ -95,7 +95,7 @@ const About = ({ isMain = false, name }) => {
       <AboutImage
         src="/onas.jpg"
         alt="O nas"
-        style={{ transform: `translateY(${offset * 0.3}px)` }}
+        style={{ transform: `translateY(${offset * 0.35}px)` }}
       />
       {isMain ? (
         <AboutInfo>
