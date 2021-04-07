@@ -15,18 +15,27 @@ const FooterContainer = styled.footer`
 `
 
 const Wrapper = styled.div`
-  padding: 60px;
+  padding: 60px 0;
   width: 100%;
   background-color: #262626;
   display: flex;
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    padding: 45px 0;
+  }
 `
 const InnerWrapper = styled.ul`
-  width: 80%;
+  width: 95%;
   max-width: 1200px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `
 
 const NavItem = styled.li`
@@ -44,6 +53,11 @@ const NavItem = styled.li`
     text-decoration: none;
     color: white;
   }
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    padding: 15px;
+    font-size: 20px;
+  }
 `
 
 const Divider = styled.div`
@@ -51,6 +65,10 @@ const Divider = styled.div`
   background-color: white !important;
   color: white;
   height: 25px;
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    display: none;
+  }
 `
 
 const ContactInfo = styled.div`
@@ -68,6 +86,18 @@ const ContactInfo = styled.div`
   p {
     padding: 5px;
     font-size: 21px;
+  }
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    position: static;
+    padding: 45px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      padding: 10px;
+    }
   }
 `
 
@@ -90,7 +120,6 @@ const Footer = () => {
         loading="lazy"
       />
       <ContactInfo>
-        <p>Kontakt:</p>
         <p>Firma Graver</p>
         <p>Wojciech Miśkowiec</p>
         <p>Dobra 2433, 34-222 Dobra</p>
@@ -111,24 +140,36 @@ const Footer = () => {
           </Link>
           <Divider />
           <Link href="/graver/kontakt">
-            <NavItem>KONTAKT</NavItem>
+            <NavItem>FORMULARZ KONTAKTOWY</NavItem>
           </Link>
           <Divider />
           <Link href="/graver/galeria">
             <NavItem>GALERIA</NavItem>
           </Link>
           <Divider />
-          <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
-            <NavItem>
-              <Image src="/facebook.svg" width={25} height={25} />
-            </NavItem>
-          </a>
-          <Divider />
-          <a href="mailto:randommail@mail.com">
-            <NavItem>
-              <Image src="/mail.svg" width={30} height={30} />
-            </NavItem>
-          </a>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              minWidth: '80px',
+            }}
+          >
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <NavItem>
+                <Image src="/facebook.svg" width={25} height={25} />
+              </NavItem>
+            </a>
+            <a href="mailto:randommail@mail.com">
+              <NavItem>
+                <Image src="/mail.svg" width={30} height={30} />
+              </NavItem>
+            </a>
+          </div>
         </InnerWrapper>
       </Wrapper>
     </FooterContainer>

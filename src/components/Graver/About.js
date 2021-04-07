@@ -22,6 +22,7 @@ const Container = styled.section`
 
 const AboutImage = styled.img`
   width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
   position: absolute;
@@ -33,7 +34,7 @@ const AboutInfo = styled.div`
   display: flex;
   flex-direction: column;
   z-index: 10;
-  width: 100%;
+  width: 80%;
   max-width: 1200px;
   margin: auto;
 `
@@ -45,6 +46,11 @@ const Heading = styled.h1`
   color: white;
   max-width: 750px;
   text-transform: uppercase;
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    font-size: 42px;
+    text-align: center;
+  }
 `
 
 const SmallHeading = styled.h4`
@@ -55,6 +61,11 @@ const SmallHeading = styled.h4`
   max-width: 600px;
   font-weight: 500;
   text-transform: uppercase;
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    font-size: 24px;
+    text-align: center;
+  }
 `
 
 const CheckUs = styled.button`
@@ -74,6 +85,10 @@ const CheckUs = styled.button`
   transition: transform 300ms ease;
   &:hover {
     transform: scale(1.1);
+  }
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    margin: 50px auto 0;
   }
 `
 

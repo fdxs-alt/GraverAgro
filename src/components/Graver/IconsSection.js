@@ -4,20 +4,20 @@ import styled from 'styled-components'
 const Wrapper = styled.section`
   width: 100%;
   background-color: ${(props) => props.theme.colors.lighterGray};
-  padding: 120px 0;
+  padding: 80px 0;
 `
 const IconsWrapper = styled.div`
   width: 100%;
-  max-width: 1300px;
   margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 50px;
-  place-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 `
 const SingleIcon = styled.div`
   display: flex;
-
+  width: 400px;
+  margin: 30px;
   img {
     width: 60px;
     height: 60px;

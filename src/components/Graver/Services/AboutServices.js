@@ -39,6 +39,7 @@ const Wrapper = styled.section`
 const ServicesHeader = styled.h1`
   font-size: 56px;
   font-weight: 700;
+  text-align: center;
 `
 
 const ServicesWrapper = styled.div`
@@ -54,6 +55,7 @@ const SingleService = styled.div`
   align-items: center;
   justify-content: space-between;
   h3 {
+    width: 20%;
     max-width: 300px;
     font-weight: 600;
     font-size: 25px;
@@ -61,9 +63,29 @@ const SingleService = styled.div`
   }
 
   p {
+    width: 60%;
     max-width: 700px;
     font-size: 18px;
     line-height: 1.2;
+  }
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    flex-direction: column;
+    padding: 30px 0;
+
+    p {
+      width: 100%;
+      max-width: unset;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    h3 {
+      width: 100%;
+      max-width: unset;
+      text-align: center;
+      margin-top: 20px;
+    }
   }
 `
 

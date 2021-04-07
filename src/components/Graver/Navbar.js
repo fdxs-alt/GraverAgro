@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 import { useScrollHeight } from '@utils'
+import Image from 'next/image'
 
 const NavContainer = styled.nav`
   width: 100%;
@@ -31,10 +32,14 @@ const NavLinks = styled.div`
   align-items: center;
   display: flex;
   justify-content: flex-end;
+
+  @media (max-width: ${(props) => props.theme.sizes.smLaptop}) {
+    display: none;
+  }
 `
 
 const NavItem = styled.li`
-  width: 175px;
+  width: 150px;
   text-align: center;
   list-style: none;
   font-weight: 600;
@@ -51,6 +56,18 @@ const NavItem = styled.li`
   }
 `
 
+const SmallMenu = styled.li`
+  width: 150px;
+  justify-content: flex-end;
+  align-items: center;
+  display: none;
+  cursor: pointer;
+
+  @media (max-width: ${(props) => props.theme.sizes.smLaptop}) {
+    display: flex;
+  }
+`
+
 const Navbar = () => {
   const height = useScrollHeight()
 
@@ -64,6 +81,9 @@ const Navbar = () => {
       <Link href="/graver">
         <Logo src="/graver.png" />
       </Link>
+      <SmallMenu>
+        <Image src="/menu.svg" alt="menu" width="40" height="40" />
+      </SmallMenu>
       <NavLinks>
         <Link href="/graver">
           <NavItem>O nas</NavItem>

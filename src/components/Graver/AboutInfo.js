@@ -17,14 +17,20 @@ const Container = styled.section`
 `
 
 const Info = styled.h2`
-  font-size: 56px;
-  font-weight: 700;
-  margin: 70px 0;
+  font-size: 48px;
+  text-align: center;
+  font-weight: 600;
+  margin: 70px 0 90px 0;
+  text-transform: uppercase;
 `
 
 const Divider = styled.img`
   align-self: center;
   margin: 15px 0 100px 0;
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    display: none;
+  }
 `
 
 const AboutText = styled.div`
@@ -41,6 +47,11 @@ const AboutText = styled.div`
     text-align: justify;
     margin: 10px 0;
   }
+
+  @media (max-width: ${(props) => props.theme.sizes.smLaptop}) {
+    max-width: unset;
+    width: 100%;
+  }
 `
 
 const ExcavatorImage = styled.img`
@@ -52,6 +63,10 @@ const ExcavatorImage = styled.img`
   width: 100%;
   max-width: 1400px;
   z-index: -10;
+
+  @media (max-width: ${(props) => props.theme.sizes.smLaptop}) {
+    display: none;
+  }
 `
 
 const AboutInfo = () => {
