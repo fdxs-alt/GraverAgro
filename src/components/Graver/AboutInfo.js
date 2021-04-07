@@ -52,6 +52,13 @@ const AboutText = styled.div`
     max-width: unset;
     width: 100%;
   }
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    p {
+      font-size: 18px;
+      line-height: 1.4;
+    }
+  }
 `
 
 const ExcavatorImage = styled.img`
