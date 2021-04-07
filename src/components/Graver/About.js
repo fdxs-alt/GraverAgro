@@ -24,9 +24,13 @@ const AboutImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
   position: absolute;
   z-index: -1;
+  object-position: center;
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    object-position: right;
+  }
 `
 
 const AboutInfo = styled.div`
