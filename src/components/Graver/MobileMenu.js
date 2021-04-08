@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 const links = [
   { href: '/graver', text: 'O nas' },
@@ -58,6 +59,16 @@ const CloseButton = styled.button`
 `
 
 const MobileMenu = ({ close }) => {
+  const router = useRouter()
+
+  React.useEffect(() => {
+    router.events.on('routeChangeStart', () => close())
+
+    return () => {
+      router.events.off('routeChangeStart', () => close())
+    }
+  }, [router, close])
+
   return (
     <Wrapper>
       <CloseButton type="button" onClick={() => close()}>
