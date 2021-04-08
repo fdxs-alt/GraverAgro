@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 import { useScrollHeight } from '@utils'
 import Image from 'next/image'
+import MobileMenu from './MobileMenu'
 
 const NavContainer = styled.nav`
   width: 100%;
@@ -17,6 +18,10 @@ const NavContainer = styled.nav`
   align-items: center;
   justify-content: space-between;
   display: flex;
+
+  @media (max-width: ${(props) => props.theme.sizes.smLaptop}) {
+    padding: 10px 20px;
+  }
 `
 
 const Logo = styled.img`
@@ -70,38 +75,42 @@ const SmallMenu = styled.li`
 
 const Navbar = () => {
   const height = useScrollHeight()
+  const [open, setOpen] = useState(false)
 
   return (
-    <NavContainer
-      style={{
-        position: height > 150 ? 'fixed' : 'absolute',
-        backgroundColor: height > 150 && 'rgba(0,0,0,0.75)',
-      }}
-    >
-      <Link href="/graver">
-        <Logo src="/graver.png" />
-      </Link>
-      <SmallMenu>
-        <Image src="/menu.svg" alt="menu" width="40" height="40" />
-      </SmallMenu>
-      <NavLinks>
+    <>
+      <NavContainer
+        style={{
+          position: height > 150 ? 'fixed' : 'absolute',
+          backgroundColor: height > 150 && 'rgba(0,0,0,0.75)',
+        }}
+      >
         <Link href="/graver">
-          <NavItem>O nas</NavItem>
+          <Logo src="/graver.png" />
         </Link>
-        <Link href="/graver/uslugi">
-          <NavItem>Usługi</NavItem>
-        </Link>
-        <Link href="/graver/kontakt">
-          <NavItem>Kontakt</NavItem>
-        </Link>
-        <Link href="/graver/park-maszyn">
-          <NavItem>Park maszyn</NavItem>
-        </Link>
-        <Link href="/graver/galeria">
-          <NavItem>Galeria</NavItem>
-        </Link>
-      </NavLinks>
-    </NavContainer>
+        <SmallMenu onClick={() => setOpen(true)}>
+          <Image src="/menu.svg" alt="menu" width="40" height="40" />
+        </SmallMenu>
+        <NavLinks>
+          <Link href="/graver">
+            <NavItem>O nas</NavItem>
+          </Link>
+          <Link href="/graver/uslugi">
+            <NavItem>Usługi</NavItem>
+          </Link>
+          <Link href="/graver/kontakt">
+            <NavItem>Kontakt</NavItem>
+          </Link>
+          <Link href="/graver/park-maszyn">
+            <NavItem>Park maszyn</NavItem>
+          </Link>
+          <Link href="/graver/galeria">
+            <NavItem>Galeria</NavItem>
+          </Link>
+        </NavLinks>
+      </NavContainer>
+      {open && <MobileMenu close={() => setOpen(false)} />}
+    </>
   )
 }
 
