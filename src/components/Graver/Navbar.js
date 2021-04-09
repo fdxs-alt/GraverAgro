@@ -82,7 +82,7 @@ const Navbar = () => {
       <NavContainer
         style={{
           position: height > 150 ? 'fixed' : 'absolute',
-          backgroundColor: height > 150 && 'rgba(0,0,0,0.75)',
+          backgroundColor: height > 150 && 'rgba(0,0,0,1)',
         }}
       >
         <Link href="/graver">
