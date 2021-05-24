@@ -5,28 +5,42 @@ import Image from 'next/image'
 
 const services = [
   {
-    title: 'Budujemy <br/> i tworzymy',
+    title: 'PRZYGOTOWUJEMY <br/> I KOPIEMY',
     text:
-      'GRAVER to firma z siedzibą w Dobrej koło Limanowej, która swoją działalność rozpoczęła w 2021 roku. Mimo krótkiego stażu na rynku, posiadamy odpowiednie kwalifikacje...',
+      'Fundament stanowi podstawę każdego budynku - prawidłowo wykonany to gwarancja trwałości i stabilności konstrukcji. Zlecone nam usługi wykonujemy z dokładną precyzją oraz starannością. Przygotowujemy teren pod budowę. Oferujemy również wykopy pod ogrodzenia, sieci wodociągowe, kanalizacyjne, elektryczne, szamba i oczyszczalnie biologiczne.',
+    icon: '/drilling-rig.svg',
+  },
+  {
+    title: 'NIWELUJEMY <br/> I RÓWNAMY',
+    text:
+      'Niwelacja terenu czyli jego wyrównanie – to jeden z pierwszych etapów budowlanych i ziemnych. Odpowiednie przygotowanie gruntu pod inwestycję budowlaną przyśpiesza a także ułatwia zrealizowanie zaplanowanego obiektu. Niwelacja terenu jest jedną z podstawowych usług świadczonych przez naszą firmę.',
     icon: '/drill.png',
   },
   {
-    title: 'Rozbieramy <br/> i wyburzamy',
-    text:
-      'GRAVER to firma z siedzibą w Dobrej koło Limanowej, która swoją działalność rozpoczęła w 2021 roku. Mimo krótkiego stażu na rynku, posiadamy odpowiednie kwalifikacje...',
-    icon: '/drill.png',
+    title: 'UTWARDZAMY <br/> I WZMACNIAMY',
+    text: `Skutecznym sposobem wzmacniania gruntu, jest jego
+      mechaniczne zagęszczenie właściwym sprzętem. Stabilnie utwardzone podłoże pozwala nam
+      osiągnąć pożądaną nam nawierzchnię potrzebną do wykonywania dalszych prac
+      budowlanych. Dzięki prawidłowemu zagęszczeniu podłoże staje się odporniejsze, gładsze
+      oraz wytrzymalsze na odkształcenia.`,
+    icon: '/mechanic-digger.svg',
   },
   {
-    title: 'Sprzedajemy <br/> i przewozimy',
-    text:
-      'GRAVER to firma z siedzibą w Dobrej koło Limanowej, która swoją działalność rozpoczęła w 2021 roku. Mimo krótkiego stażu na rynku, posiadamy odpowiednie kwalifikacje...',
-    icon: '/drill.png',
+    title: 'WYBURZAMY <br/> I ROZBIERAMY',
+    text: `Nasza firma realizuje prace rozbiórkowe i wyburzeniowe
+      koparkami kołowymi. Oferujemy swoim klientom kompleksową usługę począwszy od
+      zaplanowania prac rozbiórkowych, aż po recykling gruzu i rekultywację terenu. Każda taka
+      praca wymaga precyzji, doświadczenia oraz właściwego sprzętu.`,
+    icon: '/firewall.svg',
   },
   {
-    title: 'Wycinamy <br/> i wspinamy się',
-    text:
-      'GRAVER to firma z siedzibą w Dobrej koło Limanowej, która swoją działalność rozpoczęła w 2021 roku. Mimo krótkiego stażu na rynku, posiadamy odpowiednie kwalifikacje...',
-    icon: '/drill.png',
+    title: 'TRANPORTUJEMY <br/> I POMAGAMY',
+    text: `Świadczymy usługi transportowe lawety na terenie całego
+      kraju. Zajmujemy się przewozem maszyn budowlanych, rolniczych oraz materiałów.
+      Realizujemy transport dla klientów indywidualnych, komisów, firm spedycyjnych i fabryk.
+      Dysponujemy lawetą o ładowności 15 ton. Stuprocentowe zaangażowanie oraz
+      profesjonalne podejście do każdego zlecenia, to cechy które charakteryzują naszą pracę.`,
+    icon: '/shipment.svg',
   },
 ]
 
@@ -54,6 +68,7 @@ const SingleService = styled.div`
   background-color: ${(props) => (props.isEven ? '#C4C4C4' : 'white')};
   align-items: center;
   justify-content: space-between;
+  text-align: justify;
   h3 {
     width: 20%;
     max-width: 300px;
@@ -66,7 +81,8 @@ const SingleService = styled.div`
     width: 60%;
     max-width: 700px;
     font-size: 18px;
-    line-height: 1.2;
+    line-height: 1.4;
+    font-weight: 400;
   }
 
   @media (max-width: ${(props) => props.theme.sizes.tablet}) {

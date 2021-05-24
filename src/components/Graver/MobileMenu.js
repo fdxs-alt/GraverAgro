@@ -72,7 +72,13 @@ const MobileMenu = ({ close }) => {
   return (
     <Wrapper>
       <CloseButton type="button" onClick={() => close()}>
-        <Image alt="close" src="/close.svg" width="30px" height="30px" />
+        <Image
+          alt="close"
+          src="/close.svg"
+          width="30px"
+          height="30px"
+          loading="lazy"
+        />
       </CloseButton>
       <InnerWrapper>
         <Link href="/graver">

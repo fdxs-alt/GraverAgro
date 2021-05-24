@@ -2,10 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const text =
-  'GRAVER to firma z siedzibą w Dobrej koło Limanowej, która swoją działalność rozpoczęła w 2021 roku. Mimo krótkiego stażu na rynku, posiadamy odpowiednie kwalifikacje i wystarczające doświadczenie potrzebne do realizacji powierzonych zadań. Zajmujemy się przygotowaniem terenu pod wszelkiego rodzaju prace podziemne i naziemne. Wykonujemy wykopy pod fundamenty, sieci wodociągowe, kanalizacyjne, elektryczne, czy też gazowe. Świadczymy usługi utwardzania powierzchni, wymiany gruntu, niwelacji terenu oraz korytowania pod parkingi i drogi. Podejmiemy się także prac wyburzeniowych.'
-
-const text2 =
-  'Ponadto nasza firma dysponuje autolawetą o ładowności 15T. Realizujemy transport krajowy maszyn budowlanych, rolniczych oraz każdego rodzaju materiałów. Posiadamy zezwolenie na wykonywanie zawodu przewoźnika drogowego oraz ubezpieczenie OC przewoźnika. Oferujemy całodobową i kompleksową pomoc drogową. Działamy głównie na terenie województwa małopolskiego, a w razie potrzeb na terenie całego kraju.  Nasze usługi świadczymy w sposób szybki, tani i bezpieczny.  Odznaczamy się dużą mobilnością. Dzięki własnemu transportowi realizujemy usługi na szerokim obszarze.'
+  'GRAVER to firma z siedzibą w Dobrej koło Limanowej, która swoją działalność rozpoczęła w 2021 roku. Mimo krótkiego stażu na rynku, posiadamy odpowiednie kwalifikacje i wystarczające doświadczenie potrzebne do realizacji powierzonych zadań. Zajmujemy się przygotowaniem terenu pod wszelkiego rodzaju prace podziemne i naziemne. Wykonujemy wykopy pod fundamenty, sieci wodociągowe, kanalizacyjne, elektryczne, czy też gazowe. Świadczymy usługi utwardzania powierzchni, wymiany gruntu, niwelacji terenu oraz korytowania pod parkingi i drogi. Podejmiemy się także prac wyburzeniowych. Nasze usługi świadczymy w sposób szybki, tani i bezpieczny.'
 
 const Container = styled.section`
   margin: 50px auto;
@@ -14,6 +11,11 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   position: relative;
+  min-height: 1000px;
+
+  @media (max-width: ${(props) => props.theme.sizes.smLaptop}) {
+    min-height: unset;
+  }
 `
 
 const Info = styled.h2`
@@ -39,7 +41,6 @@ const AboutText = styled.div`
   padding: 30px;
   z-index: 10;
   box-shadow: 5px 4px 39px 0px rgba(0, 0, 0, 0.08);
-  margin-bottom: 100px;
   background-color: ${(props) => props.theme.colors.white};
   p {
     font-size: 20px;
@@ -66,9 +67,9 @@ const ExcavatorImage = styled.img`
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   top: 250px;
-  left: 50%;
+  left: 60%;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1000px;
   z-index: -10;
 
   @media (max-width: ${(props) => props.theme.sizes.smLaptop}) {
@@ -83,9 +84,8 @@ const AboutInfo = () => {
       <Info>O nas</Info>
       <AboutText>
         <p>{text}</p>
-        <p>{text2}</p>
       </AboutText>
-      <ExcavatorImage alt="koparka" src="/excavator.png" />
+      <ExcavatorImage alt="koparka" src="/excavator.png" loading="lazy" />
     </Container>
   )
 }

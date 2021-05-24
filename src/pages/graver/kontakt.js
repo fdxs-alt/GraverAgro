@@ -1,14 +1,15 @@
 import React from 'react'
-import { Layout, Navbar, About, Footer } from '@components'
+import { Layout, Navbar, About, Footer, Contact } from '@components'
 
-const Contact = () => {
+const ContactPage = () => {
   return (
     <Layout title="Graver | Kontakt">
       <Navbar />
       <About name="Kontakt" />
-      <Footer />
+      <Contact />
+      <Footer noMap />
     </Layout>
   )
 }
 
-export default Contact
+export default ContactPage

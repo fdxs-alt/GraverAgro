@@ -12,6 +12,7 @@ const theme = {
     laptop: '1366px',
     smLaptop: '1024px',
     tablet: '768px',
+    phone: '500px',
     mobile: '400px',
   },
 }

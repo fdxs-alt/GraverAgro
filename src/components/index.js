@@ -7,6 +7,8 @@ import AboutServices from './Graver/Services/AboutServices'
 import Footer from './Graver/Footer'
 import Realisations from './Graver/Realisations'
 import IconsSection from './Graver/IconsSection'
+import Contact from './Graver/Contact/Contact'
+import Machines from './Graver/Machines/Machines'
 
 export {
   Layout,
@@ -18,4 +20,6 @@ export {
   Footer,
   Realisations,
   IconsSection,
+  Contact,
+  Machines,
 }

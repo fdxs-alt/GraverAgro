@@ -123,11 +123,8 @@ const About = ({ isMain = false, name }) => {
       />
       {isMain ? (
         <AboutInfo>
-          <SmallHeading>
-            It is a long established fact that a reader will be distracted by
-            the readable content
-          </SmallHeading>
-          <Heading> Lorem Ipsum is simply dummy text of the printing </Heading>
+          <SmallHeading>MASZYNY TO NASZA PASJA!</SmallHeading>
+          <Heading>GRAVER</Heading>
           <CheckUs>Sprawdź ofertę</CheckUs>
         </AboutInfo>
       ) : (

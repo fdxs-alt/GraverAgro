@@ -5,6 +5,28 @@ import { useScrollHeight } from '@utils'
 import Image from 'next/image'
 import MobileMenu from './MobileMenu'
 
+const BackToMainContainer = styled.div`
+  display: flex;
+  width: 75px;
+  height: 75px;
+  color: white;
+  background-color: ${(props) => props.theme.colors.red};
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border-radius: 50%;
+  z-index: 500;
+  cursor: pointer;
+  transition: transform 300ms ease;
+  box-shadow: 1px 1px 5px 5px gray;
+  &:hover {
+    transform: scale(1.05);
+  }
+`
+
 const NavContainer = styled.nav`
   width: 100%;
   height: 100px;
@@ -28,6 +50,7 @@ const Logo = styled.img`
   width: 200px;
   height: 62px;
   box-shadow: 1px 1px 5px 1px black;
+  cursor: pointer;
 `
 
 const NavLinks = styled.div`
@@ -79,6 +102,17 @@ const Navbar = () => {
 
   return (
     <>
+      <Link href="/">
+        <BackToMainContainer>
+          <Image
+            src="/arrow.svg"
+            width={30}
+            height={30}
+            loading="lazy"
+            alt="powrót"
+          />
+        </BackToMainContainer>
+      </Link>
       <NavContainer
         style={{
           position: height > 150 ? 'fixed' : 'absolute',
@@ -86,7 +120,7 @@ const Navbar = () => {
         }}
       >
         <Link href="/graver">
-          <Logo src="/graver.png" />
+          <Logo src="/graver.png" loading="lazy" />
         </Link>
         <SmallMenu onClick={() => setOpen(true)}>
           <Image src="/menu.svg" alt="menu" width="40" height="40" />

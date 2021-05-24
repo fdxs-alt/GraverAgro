@@ -14,10 +14,22 @@ const Wrapper = styled.section`
 `
 
 const ImageWrapper = styled.div`
+  margin: auto;
+  width: 80%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 200px 400px 250px;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 350px 350px 350px;
+  grid-auto-rows: 300px;
   gap: 20px;
+
+  @media (max-width: ${(props) => props.theme.sizes.smLaptop}) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: ${(props) => props.theme.sizes.phone}) {
+    grid-template-columns: 1fr;
+  }
 `
 
 const RealisationImage = styled.img`
@@ -32,7 +44,7 @@ const Realisations = () => {
     <Wrapper>
       <h2>Sprawdź jak realizowaliśmy nasze usługi</h2>
       <ImageWrapper>
-        {Array(10)
+        {Array(9)
           .fill(1)
           .map((_, i) => (
             <RealisationImage key={i} src="/onas.jpg" loading="lazy" />
