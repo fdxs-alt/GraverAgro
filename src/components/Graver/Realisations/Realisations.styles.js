@@ -1,7 +1,6 @@
-import React from 'react'
 import styled from 'styled-components'
 
-const Wrapper = styled.section`
+export const Wrapper = styled.section`
   width: 100%;
   margin: 100px auto;
   h2 {
@@ -13,7 +12,7 @@ const Wrapper = styled.section`
   }
 `
 
-const ImageWrapper = styled.div`
+export const ImageWrapper = styled.div`
   margin: auto;
   width: 80%;
   display: grid;
@@ -32,26 +31,9 @@ const ImageWrapper = styled.div`
   }
 `
 
-const RealisationImage = styled.img`
+export const RealisationImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 `
-
-const Realisations = () => {
-  return (
-    <Wrapper>
-      <h2>Sprawdź jak realizowaliśmy nasze usługi</h2>
-      <ImageWrapper>
-        {Array(9)
-          .fill(1)
-          .map((_, i) => (
-            <RealisationImage key={i} src="/onas.jpg" loading="lazy" />
-          ))}
-      </ImageWrapper>
-    </Wrapper>
-  )
-}
-
-export default Realisations

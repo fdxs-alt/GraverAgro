@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import { useScrollHeight } from '@utils'
 import Image from 'next/image'
-import MobileMenu from './MobileMenu'
+import MobileMenu from '../Mobile/MobileMenu'
 
 const BackToMainContainer = styled.div`
   display: flex;
@@ -21,7 +21,7 @@ const BackToMainContainer = styled.div`
   z-index: 500;
   cursor: pointer;
   transition: transform 300ms ease;
-  box-shadow: 1px 1px 5px 5px gray;
+
   &:hover {
     transform: scale(1.05);
   }
@@ -106,8 +106,8 @@ const Navbar = () => {
         <BackToMainContainer>
           <Image
             src="/arrow.svg"
-            width={30}
-            height={30}
+            width={25}
+            height={25}
             loading="lazy"
             alt="powrót"
           />

@@ -1,46 +1,12 @@
 import React from 'react'
-import styled from 'styled-components'
-
-const Wrapper = styled.section`
-  width: 100%;
-  background-color: ${(props) => props.theme.colors.lighterGray};
-  padding: 80px 0;
-`
-const IconsWrapper = styled.div`
-  width: 100%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-`
-const SingleIcon = styled.div`
-  display: flex;
-  width: 400px;
-  margin: 30px;
-  height: 280px;
-  img {
-    width: 60px;
-    height: 60px;
-  }
-`
-
-const SmallTitle = styled.h5`
-  font-size: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
-`
-
-const TextWrapper = styled.div`
-  margin-left: 20px;
-`
-
-const Text = styled.p`
-  font-size: 20px;
-  margin-top: 10px;
-  text-align: justify;
-  line-height: 1.4;
-`
+import {
+  IconsWrapper,
+  SingleIcon,
+  SmallTitle,
+  Text,
+  TextWrapper,
+  Wrapper,
+} from './IconsSection.styles'
 
 const IconsSection = () => {
   return (

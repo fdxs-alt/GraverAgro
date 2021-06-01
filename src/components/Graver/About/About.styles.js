@@ -1,8 +1,6 @@
-import React from 'react'
 import styled from 'styled-components'
-import { useOffset, useLazyLoadImage } from '@utils'
 
-const Container = styled.section`
+export const Container = styled.section`
   width: 100%;
   height: ${(props) => (props.isMain ? '800px' : '500px')};
   display: flex;
@@ -20,7 +18,7 @@ const Container = styled.section`
   }
 `
 
-const AboutImage = styled.img`
+export const AboutImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -33,7 +31,7 @@ const AboutImage = styled.img`
   }
 `
 
-const AboutInfo = styled.div`
+export const AboutInfo = styled.div`
   color: white;
   display: flex;
   flex-direction: column;
@@ -43,7 +41,7 @@ const AboutInfo = styled.div`
   margin: auto;
 `
 
-const Heading = styled.h1`
+export const Heading = styled.h1`
   font-size: 50px;
   font-weight: 600;
   line-height: 1.1;
@@ -57,7 +55,7 @@ const Heading = styled.h1`
   }
 `
 
-const SmallHeading = styled.h4`
+export const SmallHeading = styled.h4`
   font-size: 32px;
   color: white;
   line-height: 1.3;
@@ -72,7 +70,7 @@ const SmallHeading = styled.h4`
   }
 `
 
-const CheckUs = styled.button`
+export const CheckUs = styled.button`
   all: unset;
   font-size: 26px;
   font-weight: 600;
@@ -96,7 +94,7 @@ const CheckUs = styled.button`
   }
 `
 
-const SideHeading = styled.h1`
+export const SideHeading = styled.h1`
   font-size: 58px;
   font-weight: 800;
   line-height: 1.1;
@@ -105,33 +103,3 @@ const SideHeading = styled.h1`
   z-index: 10;
   text-align: center;
 `
-
-const About = ({ isMain = false, name }) => {
-  const offset = useOffset()
-  const { src, blur } = useLazyLoadImage('/onas_low.jpg', '/onas.jpg')
-
-  return (
-    <Container id="about" isMain={isMain}>
-      <AboutImage
-        src={src}
-        alt="O nas"
-        style={{
-          transform: `translateY(${offset * 0.35}px)`,
-          filter: blur ? 'blur(20px)' : 'none',
-          transition: blur ? 'none' : 'filter 0.4s ease-out',
-        }}
-      />
-      {isMain ? (
-        <AboutInfo>
-          <SmallHeading>MASZYNY TO NASZA PASJA!</SmallHeading>
-          <Heading>GRAVER</Heading>
-          <CheckUs>Sprawdź ofertę</CheckUs>
-        </AboutInfo>
-      ) : (
-        <SideHeading>{name}</SideHeading>
-      )}
-    </Container>
-  )
-}
-
-export default About

@@ -81,7 +81,7 @@ const SingleService = styled.div`
     width: 60%;
     max-width: 700px;
     font-size: 18px;
-    line-height: 1.4;
+    line-height: 1.6;
     font-weight: 400;
   }
 
