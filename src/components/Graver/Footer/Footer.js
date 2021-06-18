@@ -18,10 +18,12 @@ const Footer = ({ noMap = false }) => {
         <>
           <Title>Znajdź nas</Title>
           <iframe
-            title="Dobra-mapa"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2580.4386828430784!2d20.233021315947624!3d49.70254244885071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47160f8a9fb06c45%3A0xaae7cb59c7be3122!2s2433%2C%20Dobra%20222%2C%2034-642%20Dobra!5e0!3m2!1spl!2spl!4v1617169011769!5m2!1spl!2spl"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2579.348084257565!2d20.237180615904215!3d49.723073747386984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47160ffda257c469%3A0xec42b28c159146b1!2sDobra%20223%2C%2034-642%20Dobra!5e0!3m2!1spl!2spl!4v1624015576848!5m2!1spl!2spl"
+            width="600"
+            height="450"
             allowFullScreen=""
             loading="lazy"
+            title="graver"
           />
           <ContactInfo>
             <p>Firma Graver</p>
