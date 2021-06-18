@@ -27,8 +27,15 @@ const Footer = ({ noMap = false }) => {
             <p>Firma Graver</p>
             <p>Wojciech Miśkowiec</p>
             <p>Dobra 2433, 34-222 Dobra</p>
-            <p>Tel: +48 323 523 524</p>
-            <p>Email: email</p>
+            <p>Tel: +48 669 308 372</p>
+            <a
+              href="mailto:firmagraver@gmail.com"
+              style={{ color: 'white' }}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <p>Email: firmagraver@gmail.com</p>
+            </a>
           </ContactInfo>
         </>
       )}
@@ -63,7 +70,7 @@ const Footer = ({ noMap = false }) => {
             }}
           >
             <a
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/FirmaGRAVER"
               target="_blank"
               rel="noreferrer"
             >
@@ -76,7 +83,7 @@ const Footer = ({ noMap = false }) => {
                 />
               </NavItem>
             </a>
-            <a href="mailto:randommail@mail.com">
+            <a href="mailto:firmagraver@gmail.com">
               <NavItem>
                 <Image src="/mail.svg" width={30} height={30} />
               </NavItem>

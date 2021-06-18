@@ -7,7 +7,7 @@ const ContactPage = () => {
       <Navbar />
       <About name="Kontakt" />
       <Contact />
-      <Footer noMap />
+      <Footer />
     </Layout>
   )
 }

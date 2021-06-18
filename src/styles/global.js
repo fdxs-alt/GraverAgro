@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
      height: 100%;
      font-family: 'Barlow', sans-serif;
      background-color: ${(props) => props.theme.colors.white};
- } 
+ }
 `
 
 export default GlobalStyles

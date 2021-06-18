@@ -39,7 +39,7 @@ export const AboutText = styled.div`
   box-shadow: 5px 4px 39px 0px rgba(0, 0, 0, 0.08);
   background-color: ${(props) => props.theme.colors.white};
   p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.6;
     text-align: justify;
     margin: 10px 0;
@@ -65,7 +65,7 @@ export const ExcavatorImage = styled.img`
   top: 250px;
   left: 60%;
   width: 100%;
-  max-width: 1000px;
+  max-width: 900px;
   z-index: -10;
 
   @media (max-width: ${(props) => props.theme.sizes.smLaptop}) {

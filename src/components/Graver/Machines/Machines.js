@@ -1,5 +1,6 @@
 import React from 'react'
-import Image from 'next/image'
+import { Image } from 'react-datocms'
+import ReactMarkdown from 'react-markdown'
 import {
   Machine,
   MachineContent,
@@ -8,33 +9,20 @@ import {
   Title,
 } from './Machines.styles'
 
-const Machines = () => {
+const Machines = ({ machines }) => {
   return (
     <>
       <Title>Nasze maszyny:</Title>
       <MachinesWrapper>
-        {Array(10)
-          .fill(1)
-          .map((_, i) => (
-            <Machine key={Math.random()} isEven={i % 2 === 0}>
-              <Image
-                layout="intrinsic"
-                src="/tra.jpg"
-                alt="traktor"
-                loading="lazy"
-                width={500}
-                height={400}
-                objectFit="contain"
-              />
-              <MachineContent>
-                <MachineTitle>Koparka</MachineTitle>
-                <li>Moc : 90KM</li>
-                <li>Waga : 4000kg</li>
-                <li>Napęd: 4x4 Max</li>
-                <li>Prędkość: 40km/h</li>
-              </MachineContent>
-            </Machine>
-          ))}
+        {machines.map((machine, i) => (
+          <Machine key={machine.id} isEven={i % 2 === 0}>
+            <Image data={machine.zdjecie.responsiveImage} />
+            <MachineContent isEven={i % 2 === 0}>
+              <MachineTitle>{machine.nazwa}</MachineTitle>
+              <ReactMarkdown>{machine.opis}</ReactMarkdown>
+            </MachineContent>
+          </Machine>
+        ))}
       </MachinesWrapper>
     </>
   )

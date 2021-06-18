@@ -37,7 +37,7 @@ const IconsSection = () => {
         <SingleIcon>
           <img src="/settings.svg" alt="tools" />
           <TextWrapper>
-            <SmallTitle>Lorem</SmallTitle>
+            <SmallTitle>Szeroki wachlarz usług</SmallTitle>
             <Text>
               Sprawdź podstronę usługi, aby dokładnie zapoznać się z profilem
               naszej firmy. Opis wykonywanych przez nas prac może pomóc w

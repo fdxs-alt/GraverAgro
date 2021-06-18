@@ -1,16 +1,15 @@
 import React from 'react'
-import { ImageWrapper, RealisationImage, Wrapper } from './Realisations.styles'
+import { Image } from 'react-datocms'
+import { ImageWrapper, Wrapper } from './Realisations.styles'
 
-const Realisations = () => {
+const Realisations = ({ photos }) => {
   return (
     <Wrapper>
       <h2>Sprawdź jak realizowaliśmy nasze usługi</h2>
       <ImageWrapper>
-        {Array(9)
-          .fill(1)
-          .map((_, i) => (
-            <RealisationImage key={i} src="/onas.jpg" loading="lazy" />
-          ))}
+        {photos.zdjecie.map((photo) => (
+          <Image data={photo.responsiveImage} key={photo.id} alt={photo.alt} />
+        ))}
       </ImageWrapper>
     </Wrapper>
   )

@@ -15,11 +15,10 @@ export const Wrapper = styled.section`
 export const ImageWrapper = styled.div`
   margin: auto;
   width: 80%;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  grid-template-columns: 350px 350px 350px;
-  grid-auto-rows: 300px;
   gap: 20px;
 
   @media (max-width: ${(props) => props.theme.sizes.smLaptop}) {
@@ -29,11 +28,4 @@ export const ImageWrapper = styled.div`
   @media (max-width: ${(props) => props.theme.sizes.phone}) {
     grid-template-columns: 1fr;
   }
-`
-
-export const RealisationImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
 `

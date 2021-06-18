@@ -1,0 +1,92 @@
+import styled from 'styled-components'
+
+export const BackToMainContainer = styled.div`
+  display: flex;
+  width: 75px;
+  height: 75px;
+  color: white;
+  background-color: ${(props) => props.theme.colors.red};
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border-radius: 50%;
+  z-index: 500;
+  cursor: pointer;
+  transition: transform 300ms ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+`
+
+export const NavContainer = styled.nav`
+  width: 100%;
+  height: 100px;
+  padding: 10px 50px;
+  display: flex;
+  align-self: center;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  transition: all 400ms ease;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+
+  @media (max-width: ${(props) => props.theme.sizes.smLaptop}) {
+    padding: 10px 20px;
+  }
+`
+
+export const Logo = styled.img`
+  width: 200px;
+  height: 62px;
+  box-shadow: 1px 1px 5px 1px black;
+  cursor: pointer;
+`
+
+export const NavLinks = styled.div`
+  margin: auto;
+  width: 100%;
+  max-width: 1500px;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: ${(props) => props.theme.sizes.smLaptop}) {
+    display: none;
+  }
+`
+
+export const NavItem = styled.li`
+  width: 150px;
+  text-align: center;
+  list-style: none;
+  font-weight: 600;
+  font-size: 21px;
+  transition: transform 300ms ease;
+  cursor: pointer;
+  color: white !important;
+  &:hover {
+    transform: scale(1.1);
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+`
+
+export const SmallMenu = styled.li`
+  width: 150px;
+  justify-content: flex-end;
+  align-items: center;
+  display: none;
+  cursor: pointer;
+
+  @media (max-width: ${(props) => props.theme.sizes.smLaptop}) {
+    display: flex;
+  }
+`

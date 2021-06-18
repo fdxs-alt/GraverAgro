@@ -35,19 +35,25 @@ export const MachineContent = styled.div`
   display: flex;
   flex-direction: column;
   width: 500px;
-  align-items: center;
-  li {
-    font-size: 24px;
+  align-items: ${(props) => (props.isEven ? 'flex-start' : 'flex-end')};
+  p {
+    font-size: 22px;
     padding: 5px 0;
     list-style: none;
-  }
-
-  b {
-    font-weight: 600;
+    max-width: 450px;
+    line-height: 1.5;
+    text-align: ${(props) => (props.isEven ? 'left' : 'right')};
+    strong {
+      font-weight: 600;
+    }
   }
 
   @media (max-width: ${(props) => props.theme.sizes.smLaptop}) {
     justify-content: center;
+    align-items: center;
+    p {
+      text-align: center;
+    }
   }
 `
 
