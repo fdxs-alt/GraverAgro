@@ -4,6 +4,7 @@
     "babel-plugin-styled-components",
     "@babel/plugin-transform-spread",
     "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-transform-classes",
     [
       "module-resolver",
       {
