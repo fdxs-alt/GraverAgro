@@ -20,6 +20,10 @@ export const Info = styled.h2`
   font-weight: 600;
   margin: 70px 0 90px 0;
   text-transform: uppercase;
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    font-size: 36px;
+  }
 `
 
 export const Divider = styled.img`
@@ -51,6 +55,7 @@ export const AboutText = styled.div`
   }
 
   @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    padding: 20px;
     p {
       font-size: 18px;
       line-height: 1.4;

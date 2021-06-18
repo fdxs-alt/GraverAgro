@@ -53,6 +53,12 @@ export const FormWrapper = styled.div`
   margin: 70px 0 30px 0;
   min-width: 500px;
   max-width: 600px;
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    min-width: unset;
+    width: 100%;
+    padding: 0 20px;
+  }
 `
 
 export const FormGroup = styled.div`
@@ -78,6 +84,11 @@ export const Header = styled.h3`
   text-align: center;
   color: ${(props) => props.theme.colors.black};
   text-transform: uppercase;
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    font-size: 28px;
+    padding: 0 10px;
+  }
 `
 
 export const Button = styled.button`

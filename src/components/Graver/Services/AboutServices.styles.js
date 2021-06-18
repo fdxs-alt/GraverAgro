@@ -10,6 +10,10 @@ export const ServicesHeader = styled.h1`
   font-size: 56px;
   font-weight: 700;
   text-align: center;
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    font-size: 36px;
+  }
 `
 
 export const ServicesWrapper = styled.div`
@@ -31,14 +35,19 @@ export const SingleService = styled.div`
     font-weight: 600;
     font-size: 25px;
     text-align: center;
+
+    @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+      font-size: 22px;
+    }
   }
 
   p {
     width: 60%;
     max-width: 700px;
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.5;
     font-weight: 400;
+    padding: 10px;
   }
 
   @media (max-width: ${(props) => props.theme.sizes.tablet}) {

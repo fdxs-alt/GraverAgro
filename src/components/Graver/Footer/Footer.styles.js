@@ -104,4 +104,8 @@ export const Title = styled.h2`
   font-weight: 600;
   margin-bottom: 100px;
   text-transform: uppercase;
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    font-size: 36px;
+  }
 `

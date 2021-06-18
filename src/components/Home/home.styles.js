@@ -34,19 +34,20 @@ export const Image = styled.div`
 
 export const GraverLogo = styled.img`
   width: 50%;
-  max-width: 500px;
+  max-width: 450px;
   position: absolute;
   bottom: 50px;
   right: 50px;
+  object-fit: contain;
 `
 
 export const AgroLogo = styled.img`
   width: 50%;
-  max-width: 500px;
+  max-width: 450px;
   position: absolute;
   top: 50px;
   left: 50px;
-  box-shadow: 1px 1px 15px 3px black;
+  object-fit: contain;
 `
 
 export const TextInfo = styled.div`

@@ -22,12 +22,20 @@ export const SingleIcon = styled.div`
     width: 60px;
     height: 60px;
   }
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    height: 230px;
+  }
 `
 
 export const SmallTitle = styled.h5`
   font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    font-size: 22px;
+  }
 `
 
 export const TextWrapper = styled.div`
@@ -39,4 +47,8 @@ export const Text = styled.p`
   margin-top: 10px;
   text-align: justify;
   line-height: 1.4;
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    font-size: 18px;
+  }
 `

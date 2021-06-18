@@ -15,6 +15,10 @@ export const MachinesWrapper = styled.section`
   width: 100%;
   max-width: 1200px;
   margin: auto;
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    padding: 20px;
+  }
 `
 export const Machine = styled.div`
   padding: 30px;
@@ -55,6 +59,14 @@ export const MachineContent = styled.div`
       text-align: center;
     }
   }
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    width: 100%;
+    p {
+      font-size: 18px;
+      line-height: 1.2;
+    }
+  }
 `
 
 export const MachineTitle = styled.h2`
@@ -63,4 +75,9 @@ export const MachineTitle = styled.h2`
   margin-bottom: 30px;
   font-weight: 600;
   text-decoration: underline;
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    margin-top: 20px;
+    font-size: 28px;
+  }
 `

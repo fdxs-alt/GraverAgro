@@ -102,4 +102,8 @@ export const SideHeading = styled.h1`
   text-transform: uppercase;
   z-index: 10;
   text-align: center;
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    font-size: 44px;
+  }
 `
