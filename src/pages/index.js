@@ -23,7 +23,7 @@ const Home = () => {
               transition: blur ? 'none' : 'filter 0.3s ease-out',
             }}
           >
-            <AgroLogo src="/agro.png" width="500px" height="300px" />
+            <AgroLogo src="/agro.png" loading="lazy" />
           </Image>
         </Link>
         <TextInfo>Wybierz interesującą Cię usługę:</TextInfo>
@@ -37,7 +37,7 @@ const Home = () => {
               transition: blurTwo ? 'none' : 'filter 0.3s ease-out',
             }}
           >
-            <GraverLogo src="/graver.png" alt="graver" />
+            <GraverLogo src="/graver.png" alt="graver" loading="lazy" />
           </Image>
         </Link>
       </Container>
