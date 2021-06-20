@@ -94,7 +94,7 @@ export const Header = styled.h3`
 export const Button = styled.button`
   all: unset;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 700;
   padding: 12px 16px;
   background-color: ${(props) => props.theme.colors.red};
   margin-top: 50px;
@@ -106,7 +106,12 @@ export const Button = styled.button`
   text-transform: uppercase;
   transition: transform 300ms ease;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   align-self: center;
+  pointer-events: ${(props) => (props.loading ? 'none' : 'all')};
+
   &:hover {
     transform: scale(1.05);
   }
@@ -114,4 +119,13 @@ export const Button = styled.button`
   @media (max-width: ${(props) => props.theme.sizes.tablet}) {
     margin: 50px auto 0;
   }
+`
+
+export const ErrorMessage = styled.small`
+  color: ${(props) => props.theme.colors.red};
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  align-self: center;
+  margin-top: 20px;
 `

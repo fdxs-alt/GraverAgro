@@ -6,7 +6,7 @@ import {
   AboutInfo,
   Footer,
   IconsSection,
-} from '../../components'
+} from '@components'
 
 const Graver = () => {
   return (

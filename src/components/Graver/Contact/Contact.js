@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useReducer } from 'react'
+import { validatePhone, validateEmail, validateName } from '@utils'
 import Input from './Input'
 import {
   FormGroup,
@@ -8,13 +9,17 @@ import {
   Header,
   Label,
   Wrapper,
+  ErrorMessage,
 } from './Contact.styles'
+import Loader from '../../Shared/Loader'
 
 const initialState = {
   email: '',
   name: '',
   message: '',
   phone: '',
+  error: '',
+  loading: false,
 }
 
 const Contact = () => {
@@ -32,6 +37,36 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    if (state.loading) {
+      return
+    }
+
+    setState({ error: '' })
+
+    const { email, name, message, phone } = state
+
+    if (!validateName(name)) {
+      setState({ error: 'Podaj poprawne imię i nazwisko' })
+      return
+    }
+
+    if (!validateEmail(email)) {
+      setState({ error: 'Podaj poprawny adres email' })
+      return
+    }
+
+    if (!validatePhone(phone)) {
+      setState({ error: 'Podaj poprawny numer telefonu' })
+      return
+    }
+
+    if (!message) {
+      setState({ error: 'Podaj wiadomość jaką chcesz nam przesłać' })
+      return
+    }
+
+    setState({ loading: true })
   }
 
   return (
@@ -87,7 +122,10 @@ const Contact = () => {
               placeholder="Wiadomość, którą chcesz nam przesłać"
             />
           </FormGroup>
-          <Button type="submit">Wyślij</Button>
+          <ErrorMessage>{state.error}</ErrorMessage>
+          <Button type="submit" loading={state.loading}>
+            {state.loading ? <Loader /> : 'Wyślij'}
+          </Button>
         </form>
       </FormWrapper>
     </Wrapper>

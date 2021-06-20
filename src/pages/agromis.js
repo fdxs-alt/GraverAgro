@@ -12,6 +12,7 @@ const Wrapper = styled.div`
   text-transform: uppercase;
   h1 {
     font-size: 44px;
+    text-align: center;
     font-weight: 600;
   }
 
@@ -20,6 +21,7 @@ const Wrapper = styled.div`
     color: red;
     font-weight: 600;
     margin-top: 30px;
+    text-align: center;
   }
 `
 

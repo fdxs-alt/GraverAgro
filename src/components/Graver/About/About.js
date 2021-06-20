@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { useOffset, useLazyLoadImage } from '@utils'
 import {
   AboutImage,
@@ -29,7 +30,9 @@ const About = ({ isMain = false, name }) => {
         <AboutInfo>
           <SmallHeading>MASZYNY TO NASZA PASJA!</SmallHeading>
           <Heading>GRAVER</Heading>
-          <CheckUs>Sprawdź ofertę</CheckUs>
+          <Link href="/graver/uslugi">
+            <CheckUs>Sprawdź ofertę</CheckUs>
+          </Link>
         </AboutInfo>
       ) : (
         <SideHeading>{name}</SideHeading>

@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const BackToMainContainer = styled.div`
   display: flex;
-  width: 75px;
-  height: 75px;
+  width: 60px;
+  height: 60px;
   color: white;
   background-color: ${(props) => props.theme.colors.red};
   font-size: 22px;
