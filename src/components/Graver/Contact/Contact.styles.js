@@ -110,7 +110,7 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   align-self: center;
-  pointer-events: ${(props) => (props.loading ? 'none' : 'all')};
+  pointer-events: ${(props) => (props.isLoading ? 'none' : 'all')};
 
   &:hover {
     transform: scale(1.05);
@@ -122,10 +122,21 @@ export const Button = styled.button`
 `
 
 export const ErrorMessage = styled.small`
-  color: ${(props) => props.theme.colors.red};
+  color: ${(props) =>
+    props.isError ? props.theme.colors.red : props.theme.colors.green};
   font-weight: 600;
   font-size: 20px;
   text-align: center;
   align-self: center;
   margin-top: 20px;
+`
+
+export const ReCaptchaWrapper = styled.div`
+  width: 100%;
+  margin-top: 20px;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `

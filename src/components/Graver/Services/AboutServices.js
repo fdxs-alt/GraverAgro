@@ -12,14 +12,12 @@ import {
 const services = [
   {
     title: 'PRZYGOTOWUJEMY <br/> I KOPIEMY',
-    text:
-      'Fundament stanowi podstawę każdego budynku - prawidłowo wykonany to gwarancja trwałości i stabilności konstrukcji. Zlecone nam usługi wykonujemy z dokładną precyzją oraz starannością. Przygotowujemy teren pod budowę. Oferujemy również wykopy pod ogrodzenia, sieci wodociągowe, kanalizacyjne, elektryczne, szamba i oczyszczalnie biologiczne.',
+    text: 'Fundament stanowi podstawę każdego budynku - prawidłowo wykonany to gwarancja trwałości i stabilności konstrukcji. Zlecone nam usługi wykonujemy z dokładną precyzją oraz starannością. Przygotowujemy teren pod budowę. Oferujemy również wykopy pod ogrodzenia, sieci wodociągowe, kanalizacyjne, elektryczne, szamba i oczyszczalnie biologiczne.',
     icon: '/drilling-rig.svg',
   },
   {
     title: 'NIWELUJEMY <br/> I RÓWNAMY',
-    text:
-      'Niwelacja terenu czyli jego wyrównanie – to jeden z pierwszych etapów budowlanych i ziemnych. Odpowiednie przygotowanie gruntu pod inwestycję budowlaną przyśpiesza a także ułatwia zrealizowanie zaplanowanego obiektu. Niwelacja terenu jest jedną z podstawowych usług świadczonych przez naszą firmę.',
+    text: 'Niwelacja terenu czyli jego wyrównanie – to jeden z pierwszych etapów budowlanych i ziemnych. Odpowiednie przygotowanie gruntu pod inwestycję budowlaną przyśpiesza a także ułatwia zrealizowanie zaplanowanego obiektu. Niwelacja terenu jest jedną z podstawowych usług świadczonych przez naszą firmę.',
     icon: '/drill.png',
   },
   {

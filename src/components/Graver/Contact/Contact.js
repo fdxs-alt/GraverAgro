@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useReducer } from 'react'
+import React, { useReducer, useRef } from 'react'
+import ReCAPTCHA from 'react-google-recaptcha'
 import { validatePhone, validateEmail, validateName } from '@utils'
 import Input from './Input'
 import {
@@ -10,6 +11,7 @@ import {
   Label,
   Wrapper,
   ErrorMessage,
+  ReCaptchaWrapper,
 } from './Contact.styles'
 import Loader from '../../Shared/Loader'
 
@@ -20,6 +22,29 @@ const initialState = {
   phone: '',
   error: '',
   loading: false,
+  success: false,
+}
+
+const sendEmail = async (data) => {
+  const response = await fetch(
+    'https://formsubmit.co/ajax/firmagraver@gmail.com',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify(data),
+    }
+  )
+
+  if (!response.ok) {
+    throw new Error('Error occured')
+  }
+
+  const responseData = await response.json()
+
+  return responseData
 }
 
 const Contact = () => {
@@ -31,11 +56,13 @@ const Contact = () => {
     initialState
   )
 
+  const recaptchaRef = useRef()
+
   const handleChange = (e) => {
     setState({ [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
 
     if (state.loading) {
@@ -66,7 +93,34 @@ const Contact = () => {
       return
     }
 
+    if (!recaptchaRef.current.getValue()) {
+      setState({ error: 'Potwierdź, że nie jesteś robotem' })
+      return
+    }
+
     setState({ loading: true })
+
+    try {
+      const data = await sendEmail({ email, phone, name, message })
+      if (data.success === 'true') {
+        setState({ success: true, email: '', name: '', message: '', phone: '' })
+      } else {
+        setState({
+          error:
+            'Wystąpił błąd poczas wysyłania wiadomości, spróbuj jeszcze raz',
+        })
+      }
+    } catch (error) {
+      setState({
+        error: 'Wystąpił błąd poczas wysyłania wiadomości, spróbuj jeszcze raz',
+      })
+    } finally {
+      setState({ loading: false })
+    }
+
+    setTimeout(() => {
+      setState({ success: false })
+    }, 5000)
   }
 
   return (
@@ -122,8 +176,20 @@ const Contact = () => {
               placeholder="Wiadomość, którą chcesz nam przesłać"
             />
           </FormGroup>
-          <ErrorMessage>{state.error}</ErrorMessage>
-          <Button type="submit" loading={state.loading}>
+          <ReCaptchaWrapper>
+            <ReCAPTCHA
+              sitekey="6Lf-0EkbAAAAAB39EJYCEdvRf8mfguXVy5lXdOBa"
+              ref={recaptchaRef}
+            />
+          </ReCaptchaWrapper>
+
+          <ErrorMessage isError={!state.success}>
+            {state.success
+              ? 'Wiadomość przesłana pomyślnie'
+              : state.error ?? ''}
+          </ErrorMessage>
+
+          <Button type="submit" isLoading={state.loading}>
             {state.loading ? <Loader /> : 'Wyślij'}
           </Button>
         </form>

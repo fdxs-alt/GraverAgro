@@ -6,6 +6,7 @@ const theme = {
     lightGrey: '#F6F6F6',
     red: '#FF0000',
     lighterGray: '#F7F7F7',
+    green: '#009A0F',
   },
   sizes: {
     desktop: '1920px',
