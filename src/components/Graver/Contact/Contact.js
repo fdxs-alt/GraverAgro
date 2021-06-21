@@ -186,7 +186,7 @@ const Contact = () => {
           <ErrorMessage isError={!state.success}>
             {state.success
               ? 'Wiadomość przesłana pomyślnie'
-              : state.error ?? ''}
+              : state.error || ''}
           </ErrorMessage>
 
           <Button type="submit" isLoading={state.loading}>
