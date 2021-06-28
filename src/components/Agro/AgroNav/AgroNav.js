@@ -11,6 +11,10 @@ const links = [
     link: '/agromis/uslugi',
   },
   {
+    text: 'Kontakt',
+    link: '/agromis/kontakt',
+  },
+  {
     text: 'Park maszyn',
     link: '/agromis/park-maszyn',
   },

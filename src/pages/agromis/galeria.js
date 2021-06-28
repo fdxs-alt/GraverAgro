@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, About, AgroNav } from '@components'
+import { Layout, About, AgroNav, AgroFooter } from '@components'
 import request from '@api'
 import { GALLERY_QUERY } from '@graphql'
 
@@ -12,6 +12,7 @@ const Gallery = ({ photos }) => {
         left
         name="GALERIA"
       />
+      <AgroFooter />
     </Layout>
   )
 }

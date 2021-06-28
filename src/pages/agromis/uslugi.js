@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, About, AgroNav } from '@components'
+import { Layout, About, AgroNav, AgroFooter } from '@components'
 
 const Services = () => {
   return (
@@ -10,6 +10,7 @@ const Services = () => {
         left
         name="USŁUGI"
       />
+      <AgroFooter />
     </Layout>
   )
 }

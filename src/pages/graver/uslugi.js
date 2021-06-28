@@ -1,5 +1,11 @@
 import React from 'react'
-import { Layout, GraverNav, About, AboutServices, Footer } from '@components'
+import {
+  Layout,
+  GraverNav,
+  About,
+  AboutServices,
+  GraverFooter,
+} from '@components'
 
 const Services = () => {
   return (
@@ -7,7 +13,7 @@ const Services = () => {
       <GraverNav />
       <About name="Usługi" imgSrc={['/onas_low.jpg', '/onas.jpg']} />
       <AboutServices />
-      <Footer />
+      <GraverFooter />
     </Layout>
   )
 }

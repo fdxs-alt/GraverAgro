@@ -96,8 +96,8 @@ export const Button = styled.button`
   font-size: 22px;
   font-weight: 700;
   padding: 12px 16px;
-  background-color: ${(props) => props.theme.colors.red};
-  margin-top: 50px;
+  background-color: ${(props) => props.theme.colors[props.color]};
+  margin-top: 30px;
   width: fit-content;
   min-width: 150px;
   min-height: 30px;

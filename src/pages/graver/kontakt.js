@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, GraverNav, About, Footer, Contact } from '@components'
+import { Layout, GraverNav, About, GraverFooter, Contact } from '@components'
 
 const ContactPage = () => {
   return (
@@ -7,7 +7,7 @@ const ContactPage = () => {
       <GraverNav />
       <About name="Kontakt" imgSrc={['/onas_low.jpg', '/onas.jpg']} />
       <Contact />
-      <Footer />
+      <GraverFooter />
     </Layout>
   )
 }

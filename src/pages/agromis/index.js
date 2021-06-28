@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, About, AboutSection, AgroNav } from '@components'
+import { Layout, About, AboutSection, AgroNav, AgroFooter } from '@components'
 
 const Agro = () => {
   return (
@@ -14,6 +14,7 @@ const Agro = () => {
           bg="green"
         />
       </About>
+      <AgroFooter />
     </Layout>
   )
 }

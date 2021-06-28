@@ -1,7 +1,7 @@
 import React from 'react'
 import request from '@api'
-import { MACHINES_QUERY } from '@graphql'
-import { Layout, About, AgroNav } from '@components'
+import { AGRO_MACHINES_QUERY } from '@graphql'
+import { Layout, About, AgroNav, AgroFooter, Machines } from '@components'
 
 const MachinesPark = ({ machines }) => {
   return (
@@ -12,6 +12,8 @@ const MachinesPark = ({ machines }) => {
         left
         name="PARK MASZYN"
       />
+      <Machines machines={machines} />
+      <AgroFooter />
     </Layout>
   )
 }
@@ -19,7 +21,7 @@ const MachinesPark = ({ machines }) => {
 export default MachinesPark
 
 export const getStaticProps = async () => {
-  const { allMachines } = await request({ query: MACHINES_QUERY })
+  const { allAgromachines } = await request({ query: AGRO_MACHINES_QUERY })
 
-  return { props: { machines: allMachines } }
+  return { props: { machines: allAgromachines } }
 }

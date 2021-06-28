@@ -16,6 +16,7 @@ export const Wrapper = styled.div`
   width: 100%;
   background-color: #262626;
   display: flex;
+  border-top: 12px solid ${(props) => props.theme.colors[props.color]};
 
   @media (max-width: ${(props) => props.theme.sizes.tablet}) {
     padding: 45px 0;

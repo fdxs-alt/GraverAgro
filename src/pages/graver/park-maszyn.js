@@ -1,7 +1,7 @@
 import React from 'react'
 import request from '@api'
 import { MACHINES_QUERY } from '@graphql'
-import { Machines, Layout, GraverNav, About, Footer } from '@components'
+import { Machines, Layout, GraverNav, About, GraverFooter } from '@components'
 
 const MachinesPark = ({ machines }) => {
   return (
@@ -9,7 +9,7 @@ const MachinesPark = ({ machines }) => {
       <GraverNav />
       <About name="Park maszyn" imgSrc={['/onas_low.jpg', '/onas.jpg']} />
       <Machines machines={machines} />
-      <Footer />
+      <GraverFooter />
     </Layout>
   )
 }

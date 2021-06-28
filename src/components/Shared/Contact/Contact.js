@@ -13,7 +13,7 @@ import {
   ErrorMessage,
   ReCaptchaWrapper,
 } from './Contact.styles'
-import Loader from '../../Shared/Loader'
+import Loader from '../Loader'
 
 const initialState = {
   email: '',
@@ -47,7 +47,7 @@ const sendEmail = async (data) => {
   return responseData
 }
 
-const Contact = () => {
+const Contact = ({ color = 'red' }) => {
   const [state, setState] = useReducer(
     (prevState, newState) => ({
       ...prevState,
@@ -189,7 +189,7 @@ const Contact = () => {
               : state.error || ''}
           </ErrorMessage>
 
-          <Button type="submit" isLoading={state.loading}>
+          <Button type="submit" isLoading={state.loading} color={color}>
             {state.loading ? <Loader /> : 'Wyślij'}
           </Button>
         </form>

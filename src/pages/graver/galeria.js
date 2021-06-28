@@ -1,5 +1,11 @@
 import React from 'react'
-import { Layout, GraverNav, About, Footer, Realisations } from '@components'
+import {
+  Layout,
+  GraverNav,
+  About,
+  GraverFooter,
+  Realisations,
+} from '@components'
 import request from '@api'
 import { GALLERY_QUERY } from '@graphql'
 
@@ -9,7 +15,7 @@ const Gallery = ({ photos }) => {
       <GraverNav />
       <About name="Galeria" imgSrc={['/onas_low.jpg', '/onas.jpg']} />
       <Realisations photos={photos} />
-      <Footer />
+      <GraverFooter />
     </Layout>
   )
 }
