@@ -24,10 +24,10 @@ export const AboutImage = styled.img`
   object-fit: cover;
   position: absolute;
   z-index: -1;
-  object-position: center;
+  object-position: ${(props) => (props.left ? 'bottom' : 'center')};
 
   @media (max-width: ${(props) => props.theme.sizes.tablet}) {
-    object-position: right;
+    object-position: ${(props) => (props.left ? 'left' : 'right')};
   }
 `
 
@@ -76,7 +76,7 @@ export const CheckUs = styled.button`
   font-weight: 600;
   background-color: #9fa08b;
   padding: 16px 26px;
-  background-color: ${(props) => props.theme.colors.red};
+  background-color: ${({ theme, bg }) => theme.colors[bg]};
   margin-top: 50px;
   width: fit-content;
   min-width: 150px;

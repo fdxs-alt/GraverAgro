@@ -1,11 +1,11 @@
 import React from 'react'
-import { Layout, Navbar, About, AboutServices, Footer } from '@components'
+import { Layout, GraverNav, About, AboutServices, Footer } from '@components'
 
 const Services = () => {
   return (
     <Layout title="Graver | Usługi">
-      <Navbar />
-      <About name="Usługi" />
+      <GraverNav />
+      <About name="Usługi" imgSrc={['/onas_low.jpg', '/onas.jpg']} />
       <AboutServices />
       <Footer />
     </Layout>

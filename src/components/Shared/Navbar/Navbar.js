@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { useScrollHeight } from '@utils'
@@ -12,14 +13,14 @@ import {
   SmallMenu,
 } from './Navbar.styles'
 
-const Navbar = () => {
+const Navbar = ({ logoSrc, link, links, color = 'red' }) => {
   const height = useScrollHeight()
   const [open, setOpen] = useState(false)
 
   return (
     <>
       <Link href="/">
-        <BackToMainContainer>
+        <BackToMainContainer color={color}>
           <Image
             src="/arrow.svg"
             width={25}
@@ -35,31 +36,28 @@ const Navbar = () => {
           backgroundColor: height > 150 && 'rgba(0,0,0,1)',
         }}
       >
-        <Link href="/graver">
-          <Logo src="/graver.png" loading="lazy" />
+        <Link href={link}>
+          <Logo src={logoSrc} loading="lazy" alt="logo" />
         </Link>
         <SmallMenu onClick={() => setOpen(true)}>
           <Image src="/menu.svg" alt="menu" width="40" height="40" />
         </SmallMenu>
         <NavLinks>
-          <Link href="/graver">
-            <NavItem>O nas</NavItem>
-          </Link>
-          <Link href="/graver/uslugi">
-            <NavItem>Usługi</NavItem>
-          </Link>
-          <Link href="/graver/kontakt">
-            <NavItem>Kontakt</NavItem>
-          </Link>
-          <Link href="/graver/park-maszyn">
-            <NavItem>Park maszyn</NavItem>
-          </Link>
-          <Link href="/graver/galeria">
-            <NavItem>Galeria</NavItem>
-          </Link>
+          {links.map((el, i) => (
+            <Link href={el.link} key={i}>
+              <NavItem>{el.text}</NavItem>
+            </Link>
+          ))}
         </NavLinks>
       </NavContainer>
-      {open && <MobileMenu close={() => setOpen(false)} />}
+      {open && (
+        <MobileMenu
+          close={() => setOpen(false)}
+          link={link}
+          links={links}
+          logoSrc={logoSrc}
+        />
+      )}
     </>
   )
 }

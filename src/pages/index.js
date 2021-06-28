@@ -16,7 +16,6 @@ const Home = () => {
       <Container>
         <Link href="/agromis">
           <Image
-            loading="lazy"
             style={{
               backgroundImage: `url(${src})`,
               filter: blur ? 'blur(20px)' : 'none',
@@ -29,7 +28,6 @@ const Home = () => {
         <TextInfo>Wybierz interesującą Cię usługę:</TextInfo>
         <Link href="/graver">
           <Image
-            loading="lazy"
             style={{
               backgroundImage: `url(${srcTwo})`,
               backgroundPosition: 'bottom',

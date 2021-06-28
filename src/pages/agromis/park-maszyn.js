@@ -1,15 +1,17 @@
 import React from 'react'
 import request from '@api'
 import { MACHINES_QUERY } from '@graphql'
-import { Machines, Layout, GraverNav, About, Footer } from '@components'
+import { Layout, About, AgroNav } from '@components'
 
 const MachinesPark = ({ machines }) => {
   return (
-    <Layout title="Graver | Park maszyn">
-      <GraverNav />
-      <About name="Park maszyn" imgSrc={['/onas_low.jpg', '/onas.jpg']} />
-      <Machines machines={machines} />
-      <Footer />
+    <Layout title="Agro | Park maszyn">
+      <AgroNav />
+      <About
+        imgSrc={['/agro-main-low.jpg', '/agro-main.jpg']}
+        left
+        name="PARK MASZYN"
+      />
     </Layout>
   )
 }

@@ -1,11 +1,11 @@
 import React from 'react'
-import { Layout, Navbar, About, Footer, Contact } from '@components'
+import { Layout, GraverNav, About, Footer, Contact } from '@components'
 
 const ContactPage = () => {
   return (
     <Layout title="Graver | Kontakt">
-      <Navbar />
-      <About name="Kontakt" />
+      <GraverNav />
+      <About name="Kontakt" imgSrc={['/onas_low.jpg', '/onas.jpg']} />
       <Contact />
       <Footer />
     </Layout>

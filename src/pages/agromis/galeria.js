@@ -1,15 +1,17 @@
 import React from 'react'
-import { Layout, GraverNav, About, Footer, Realisations } from '@components'
+import { Layout, About, AgroNav } from '@components'
 import request from '@api'
 import { GALLERY_QUERY } from '@graphql'
 
 const Gallery = ({ photos }) => {
   return (
-    <Layout title="Graver | Galeria">
-      <GraverNav />
-      <About name="Galeria" imgSrc={['/onas_low.jpg', '/onas.jpg']} />
-      <Realisations photos={photos} />
-      <Footer />
+    <Layout title="Agro | Galeria">
+      <AgroNav />
+      <About
+        imgSrc={['/agro-main-low.jpg', '/agro-main.jpg']}
+        left
+        name="GALERIA"
+      />
     </Layout>
   )
 }

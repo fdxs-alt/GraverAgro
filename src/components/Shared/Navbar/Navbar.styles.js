@@ -5,7 +5,7 @@ export const BackToMainContainer = styled.div`
   width: 60px;
   height: 60px;
   color: white;
-  background-color: ${(props) => props.theme.colors.red};
+  background-color: ${(props) => props.theme.colors[props.color]};
   font-size: 22px;
   justify-content: center;
   align-items: center;
@@ -42,10 +42,12 @@ export const NavContainer = styled.nav`
 `
 
 export const Logo = styled.img`
-  width: 200px;
-  height: 62px;
+  max-width: 200px;
+  min-height: 62px;
+  max-height: 80px;
   box-shadow: 1px 1px 5px 1px black;
   cursor: pointer;
+  object-fit: contain;
 `
 
 export const NavLinks = styled.div`

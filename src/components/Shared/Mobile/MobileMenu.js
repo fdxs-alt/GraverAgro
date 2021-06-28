@@ -10,15 +10,7 @@ import {
   Wrapper,
 } from './MobileMenu.styles'
 
-const links = [
-  { href: '/graver', text: 'O nas' },
-  { href: '/graver/uslugi', text: 'Usługi' },
-  { href: '/graver/kontakt', text: 'Kontakt' },
-  { href: '/graver/park-maszyn', text: 'Park maszyn' },
-  { href: '/graver/galeria', text: 'Galeria' },
-]
-
-const MobileMenu = ({ close }) => {
+const MobileMenu = ({ close, links, logoSrc, link }) => {
   const router = useRouter()
 
   React.useEffect(() => {
@@ -41,12 +33,12 @@ const MobileMenu = ({ close }) => {
         />
       </CloseButton>
       <InnerWrapper>
-        <Link href="/graver">
-          <Logo src="/graver.png" />
+        <Link href={link}>
+          <Logo src={logoSrc} />
         </Link>
-        {links.map((link, i) => (
-          <Link href={link.href} key={i}>
-            <NavItem>{link.text}</NavItem>
+        {links.map((el, i) => (
+          <Link href={el.link} key={i}>
+            <NavItem>{el.text}</NavItem>
           </Link>
         ))}
       </InnerWrapper>

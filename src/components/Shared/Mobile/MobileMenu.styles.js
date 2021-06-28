@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 
 export const Logo = styled.img`
-  width: 200px;
-  height: 62px;
+  max-width: 200px;
+  min-height: 62px;
   box-shadow: 1px 1px 5px 1px black;
   margin-bottom: 40px;
   cursor: pointer;
+  object-fit: contain;
 `
 
 export const Wrapper = styled.div`

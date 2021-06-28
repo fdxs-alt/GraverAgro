@@ -44,10 +44,10 @@ const StyledLoader = styled.div`
 const Loader = () => {
   return (
     <StyledLoader>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+      <div />
+      <div />
+      <div />
+      <div />
     </StyledLoader>
   )
 }
