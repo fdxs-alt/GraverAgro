@@ -3,7 +3,7 @@ import { Layout, AgroNav, About, Contact, AgroFooter } from '@components'
 
 const ContactPage = () => {
   return (
-    <Layout title="Graver | Kontakt">
+    <Layout title="Agromiś | Kontakt" favicon="/agro-favicon">
       <AgroNav />
       <About
         name="Kontakt"

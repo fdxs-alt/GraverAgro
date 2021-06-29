@@ -70,3 +70,25 @@ export const AGRO_MACHINES_QUERY = `query {
   }
 }
 `
+export const GALLERY_AGRO_QUERY = `query {
+  galleryagro {
+    zdjecie {
+      alt
+      id
+      responsiveImage(imgixParams: {fit: crop, w: 400, h: 225, auto: format}) {
+        srcSet
+        webpSrcSet
+        sizes
+        src
+        width
+        height
+        aspectRatio
+        alt
+        title
+        bgColor
+        base64
+      }
+    }
+  }
+}
+`

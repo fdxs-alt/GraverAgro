@@ -3,7 +3,7 @@ import { Layout, About, AgroNav, AgroFooter, AgroServices } from '@components'
 
 const Services = () => {
   return (
-    <Layout title="Agro | Usługi">
+    <Layout title="Agromiś | Usługi" favicon="/agro-favicon">
       <AgroNav />
       <About
         imgSrc={['/agro-main-low.jpg', '/agro-main.jpg']}

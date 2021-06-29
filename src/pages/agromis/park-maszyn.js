@@ -5,7 +5,7 @@ import { Layout, About, AgroNav, AgroFooter, Machines } from '@components'
 
 const MachinesPark = ({ machines }) => {
   return (
-    <Layout title="Agro | Park maszyn">
+    <Layout title="Agromiś | Park maszyn" favicon="/agro-favicon">
       <AgroNav />
       <About
         imgSrc={['/agro-main-low.jpg', '/agro-main.jpg']}
