@@ -6,6 +6,7 @@ import {
   AgroNav,
   AgroFooter,
   AboutAgro,
+  AgroInfo,
 } from '@components'
 
 const Agro = () => {
@@ -21,6 +22,7 @@ const Agro = () => {
           bg="green"
         />
       </About>
+      <AgroInfo />
       <AboutAgro />
       <AgroFooter />
     </Layout>
