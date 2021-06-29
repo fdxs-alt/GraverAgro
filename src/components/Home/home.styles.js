@@ -35,6 +35,7 @@ export const Image = styled.div`
 export const GraverLogo = styled.img`
   width: 50%;
   max-width: 450px;
+  max-height: 250px;
   position: absolute;
   bottom: 50px;
   right: 50px;
@@ -44,6 +45,7 @@ export const GraverLogo = styled.img`
 export const AgroLogo = styled.img`
   width: 50%;
   max-width: 450px;
+  max-height: 250px;
   position: absolute;
   top: 50px;
   left: 50px;
