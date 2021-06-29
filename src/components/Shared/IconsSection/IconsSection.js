@@ -15,7 +15,7 @@ const IconsSection = ({ icons }) => {
       <IconsWrapper>
         {icons.map((el, i) => (
           <SingleIcon key={i}>
-            <img src={el.icon} alt={el.alt} loading="lazy" />
+            <img src={el.icon} alt={el.alt} />
             <TextWrapper>
               <SmallTitle>{el.title}</SmallTitle>
               <Text>{el.text}</Text>
