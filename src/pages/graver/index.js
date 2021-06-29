@@ -3,9 +3,9 @@ import {
   Layout,
   GraverNav,
   About,
-  AboutInfo,
+  AboutGraver,
   GraverFooter,
-  IconsSection,
+  GraverInfo,
   AboutSection,
 } from '@components'
 
@@ -21,8 +21,8 @@ const Graver = () => {
           link="/graver/uslugi"
         />
       </About>
-      <IconsSection />
-      <AboutInfo />
+      <GraverInfo />
+      <AboutGraver />
       <GraverFooter />
     </Layout>
   )

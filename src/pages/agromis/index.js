@@ -1,5 +1,12 @@
 import React from 'react'
-import { Layout, About, AboutSection, AgroNav, AgroFooter } from '@components'
+import {
+  Layout,
+  About,
+  AboutSection,
+  AgroNav,
+  AgroFooter,
+  AboutAgro,
+} from '@components'
 
 const Agro = () => {
   return (
@@ -14,6 +21,7 @@ const Agro = () => {
           bg="green"
         />
       </About>
+      <AboutAgro />
       <AgroFooter />
     </Layout>
   )

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Wrapper = styled.section`
   width: 100%;
   background-color: ${(props) => props.theme.colors.lighterGray};
-  padding: 80px 0;
+  padding: 40px 0;
 `
 export const IconsWrapper = styled.div`
   width: 100%;
@@ -17,14 +17,15 @@ export const SingleIcon = styled.div`
   display: flex;
   width: 400px;
   margin: 30px;
-  height: 280px;
+  height: 200px;
   img {
     width: 60px;
     height: 60px;
   }
 
   @media (max-width: ${(props) => props.theme.sizes.tablet}) {
-    height: 230px;
+    height: auto;
+    min-height: unset;
   }
 `
 

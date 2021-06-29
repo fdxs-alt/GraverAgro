@@ -3,12 +3,15 @@ import * as HomeStyles from './Home/home.styles'
 import GraverNav from './Graver/GraverNav/GraverNav'
 import AgroNav from './Agro/AgroNav/AgroNav'
 import About from './Shared/About/About'
-import AboutInfo from './Graver/AboutInfo/AboutInfo'
-import AboutServices from './Graver/Services/AboutServices'
+import AboutAgro from './Agro/AboutAgro/AboutAgro'
+import AboutGraver from './Graver/AboutGraver/AboutGraver'
+import AgroServices from './Agro/Services/AgroServices'
+import GraverServices from './Graver/Services/GraverServices'
 import GraverFooter from './Graver/GraverFooter/GraverFooter'
 import AgroFooter from './Agro/AgroFooter/AgroFooter'
 import Realisations from './Graver/Realisations/Realisations'
-import IconsSection from './Graver/IconsSection/IconsSection'
+import GraverInfo from './Graver/GraverInfo/GraverInfo'
+import AgroInfo from './Agro/AgroInfo/AgroInfo'
 import Contact from './Shared/Contact/Contact'
 import Machines from './Graver/Machines/Machines'
 import AboutSection from './Shared/About/AboutSection'
@@ -18,14 +21,17 @@ export {
   HomeStyles,
   GraverNav,
   About,
-  AboutInfo,
-  AboutServices,
   GraverFooter,
   Realisations,
-  IconsSection,
+  GraverInfo,
   Contact,
   Machines,
   AboutSection,
   AgroNav,
   AgroFooter,
+  AgroInfo,
+  AboutAgro,
+  AboutGraver,
+  AgroServices,
+  GraverServices,
 }

@@ -3,7 +3,7 @@ import {
   Layout,
   GraverNav,
   About,
-  AboutServices,
+  GraverServices,
   GraverFooter,
 } from '@components'
 
@@ -12,7 +12,7 @@ const Services = () => {
     <Layout title="Graver | Usługi">
       <GraverNav />
       <About name="Usługi" imgSrc={['/onas_low.jpg', '/onas.jpg']} />
-      <AboutServices />
+      <GraverServices />
       <GraverFooter />
     </Layout>
   )
