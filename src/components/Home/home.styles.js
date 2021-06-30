@@ -6,7 +6,6 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color: black;
 `
 
 export const Image = styled.div`
@@ -68,6 +67,6 @@ export const TextInfo = styled.div`
   text-align: center;
   box-shadow: 1px 1px 2px 3px rgba(20, 20, 20);
   color: white;
-  background-color: rgba(20, 20, 20);
+  background-color: rgb(20, 20, 20);
   z-index: 20;
 `
