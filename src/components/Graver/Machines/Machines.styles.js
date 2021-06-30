@@ -61,6 +61,7 @@ export const MachineContent = styled.div`
 
     p {
       text-align: center;
+      font-size: 20px;
     }
   }
 
@@ -69,6 +70,13 @@ export const MachineContent = styled.div`
     p {
       font-size: 18px;
       line-height: 1.2;
+    }
+  }
+
+  @media (max-width: ${(props) => props.theme.sizes.phone}) {
+    width: 100%;
+    p {
+      font-size: 16px;
     }
   }
 `
@@ -80,8 +88,11 @@ export const MachineTitle = styled.h2`
   font-weight: 600;
   text-decoration: underline;
 
-  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
-    margin-top: 20px;
+  @media (max-width: ${(props) => props.theme.sizes.smLaptop}) {
     font-size: 28px;
+  }
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    font-size: 24px;
   }
 `

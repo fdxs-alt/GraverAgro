@@ -30,6 +30,9 @@ export const SingleIcon = styled.div`
   @media (max-width: ${(props) => props.theme.sizes.tablet}) {
     height: auto;
     min-height: unset;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `
 
@@ -40,6 +43,8 @@ export const SmallTitle = styled.h5`
 
   @media (max-width: ${(props) => props.theme.sizes.tablet}) {
     font-size: 22px;
+    text-align: center;
+    margin-top: 20px;
   }
 `
 
@@ -55,5 +60,7 @@ export const Text = styled.p`
 
   @media (max-width: ${(props) => props.theme.sizes.tablet}) {
     font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
   }
 `

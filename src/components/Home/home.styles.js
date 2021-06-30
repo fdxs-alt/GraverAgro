@@ -6,6 +6,7 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   position: relative;
+  background-color: black;
 `
 
 export const Image = styled.div`

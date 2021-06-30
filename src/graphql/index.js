@@ -5,7 +5,7 @@ export const MACHINES_QUERY = `query {
       nazwa
       zdjecie {
         alt
-        responsiveImage(imgixParams: {fit: crop, w: 500, h: 400, auto: format}) {
+        responsiveImage(imgixParams: {fit: crop, w: 500, h: 320, auto: format}) {
           srcSet
           webpSrcSet
           sizes
@@ -53,7 +53,7 @@ export const AGRO_MACHINES_QUERY = `query {
     nazwa
     zdjecie {
       alt
-      responsiveImage(imgixParams: {fit: crop, w: 500, h: 400, auto: format}) {
+      responsiveImage(imgixParams: {fit: crop, w: 500, h: 320, auto: format}) {
         srcSet
         webpSrcSet
         sizes
