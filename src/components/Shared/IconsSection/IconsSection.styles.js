@@ -4,6 +4,10 @@ export const Wrapper = styled.section`
   width: 100%;
   background-color: ${(props) => props.theme.colors.lighterGray};
   padding: 40px 0;
+
+  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    padding: 20px 0;
+  }
 `
 export const IconsWrapper = styled.div`
   width: 100%;

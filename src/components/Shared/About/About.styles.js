@@ -9,6 +9,11 @@ export const Container = styled.section`
   position: relative;
   z-index: 1;
   overflow: hidden;
+
+  @media (max-width: ${(props) => props.theme.sizes.laptop}) {
+    height: ${(props) => (props.isMain ? '600px' : '400px')};
+  }
+
   &::before {
     position: absolute;
     content: '';
@@ -102,6 +107,10 @@ export const SideHeading = styled.h1`
   text-transform: uppercase;
   z-index: 10;
   text-align: center;
+
+  @media (max-width: ${(props) => props.theme.sizes.laptop}) {
+    font-size: 50px;
+  }
 
   @media (max-width: ${(props) => props.theme.sizes.tablet}) {
     font-size: 44px;

@@ -33,9 +33,9 @@ export const InnerWrapper = styled.ul`
 export const NavItem = styled.li`
   list-style: none;
   cursor: pointer;
-  font-size: 28px;
+  font-size: 24px;
   text-transform: uppercase;
-  padding: 20px;
+  padding: 18px;
   font-weight: 600;
 `
 

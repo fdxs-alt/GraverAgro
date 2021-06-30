@@ -11,6 +11,7 @@ export const Container = styled.section`
 
   @media (max-width: ${(props) => props.theme.sizes.smLaptop}) {
     min-height: unset;
+    width: 90%;
   }
 `
 
@@ -20,6 +21,11 @@ export const Info = styled.h2`
   font-weight: 600;
   margin: 70px 0 90px 0;
   text-transform: uppercase;
+
+  @media (max-width: ${(props) => props.theme.sizes.laptop}) {
+    font-size: 42px;
+    margin: 30px 0;
+  }
 
   @media (max-width: ${(props) => props.theme.sizes.tablet}) {
     font-size: 36px;

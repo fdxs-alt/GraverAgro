@@ -9,6 +9,15 @@ export const FooterContainer = styled.footer`
     outline: none;
     height: 500px;
   }
+
+  @media (max-width: ${(props) => props.theme.sizes.laptop}) {
+    margin-top: 20px;
+    iframe {
+      width: 100%;
+      outline: none;
+      height: 400px;
+    }
+  }
 `
 
 export const Wrapper = styled.div`
@@ -54,7 +63,6 @@ export const NavItem = styled.li`
 
   @media (max-width: ${(props) => props.theme.sizes.tablet}) {
     padding: 15px;
-    font-size: 20px;
   }
 `
 
@@ -85,6 +93,11 @@ export const ContactInfo = styled.div`
     padding: 5px;
     font-size: 21px;
   }
+  @media (max-width: ${(props) => props.theme.sizes.laptop}) {
+    p {
+      font-size: 18px;
+    }
+  }
 
   @media (max-width: ${(props) => props.theme.sizes.tablet}) {
     position: static;
@@ -105,6 +118,10 @@ export const Title = styled.h2`
   font-weight: 600;
   margin-bottom: 100px;
   text-transform: uppercase;
+
+  @media (max-width: ${(props) => props.theme.sizes.laptop}) {
+    font-size: 42px;
+  }
 
   @media (max-width: ${(props) => props.theme.sizes.tablet}) {
     font-size: 36px;

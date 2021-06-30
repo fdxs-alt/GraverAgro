@@ -23,7 +23,7 @@ const links = [
 const data = [
   'FIRMA AGROMIŚ',
   'WALDERMAR MIŚKOWIEC',
-  'Dobra 2433, 34-222 Dobra',
+  'Dobra 233, 34-222 Dobra',
   'Tel: +48 669 308 372',
 ]
 

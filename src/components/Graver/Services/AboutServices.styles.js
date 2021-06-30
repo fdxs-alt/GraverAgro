@@ -11,6 +11,10 @@ export const ServicesHeader = styled.h1`
   font-weight: 700;
   text-align: center;
 
+  @media (max-width: ${(props) => props.theme.sizes.laptop}) {
+    font-size: 48px;
+  }
+
   @media (max-width: ${(props) => props.theme.sizes.tablet}) {
     font-size: 36px;
   }
@@ -50,7 +54,7 @@ export const SingleService = styled.div`
     padding: 10px;
   }
 
-  @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+  @media (max-width: ${(props) => props.theme.sizes.smLaptop}) {
     flex-direction: column;
     padding: 30px 0;
 
@@ -59,6 +63,7 @@ export const SingleService = styled.div`
       max-width: unset;
       text-align: center;
       margin-top: 20px;
+      font-size: 16px;
     }
 
     h3 {

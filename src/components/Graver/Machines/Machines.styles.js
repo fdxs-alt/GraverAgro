@@ -12,11 +12,12 @@ export const MachinesWrapper = styled.section`
   display: flex;
   flex-direction: column;
   gap: 30px;
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
   margin: auto;
 
   @media (max-width: ${(props) => props.theme.sizes.tablet}) {
+    width: 95%;
     padding: 20px;
   }
 `
@@ -25,7 +26,7 @@ export const Machine = styled.div`
   border: 1px solid #eeeeee;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  gap: 20px;
   flex-direction: ${(props) => (props.isEven ? 'row' : 'row-reverse')};
   align-items: center;
   justify-content: space-between;
@@ -33,6 +34,7 @@ export const Machine = styled.div`
   text-transform: uppercase;
   @media (max-width: ${(props) => props.theme.sizes.smLaptop}) {
     justify-content: center;
+    flex-wrap: wrap;
   }
 `
 export const MachineContent = styled.div`
@@ -55,6 +57,8 @@ export const MachineContent = styled.div`
   @media (max-width: ${(props) => props.theme.sizes.smLaptop}) {
     justify-content: center;
     align-items: center;
+    text-align: center;
+
     p {
       text-align: center;
     }

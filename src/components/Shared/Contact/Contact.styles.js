@@ -117,7 +117,7 @@ export const Button = styled.button`
   }
 
   @media (max-width: ${(props) => props.theme.sizes.tablet}) {
-    margin: 50px auto 0;
+    margin: 35px auto 0;
   }
 `
 
