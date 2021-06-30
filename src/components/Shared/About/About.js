@@ -2,9 +2,16 @@ import React from 'react'
 import { useOffset, useLazyLoadImage } from '@utils'
 import { AboutImage, Container, SideHeading } from './About.styles'
 
-const About = ({ isMain = false, name, children, imgSrc, left = false }) => {
+const About = ({
+  isMain = false,
+  name,
+  children,
+  imgSrcLow,
+  imgSrc,
+  left = false,
+}) => {
   const offset = useOffset()
-  const { src, blur } = useLazyLoadImage(imgSrc[0], imgSrc[1])
+  const { src, blur } = useLazyLoadImage(imgSrcLow, imgSrc)
 
   return (
     <Container id="about" isMain={isMain}>

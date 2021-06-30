@@ -8,7 +8,8 @@ const MachinesPark = ({ machines }) => {
     <Layout title="Agromiś | Park maszyn" favicon="/agro-favicon">
       <AgroNav />
       <About
-        imgSrc={['/agro-main-low.jpg', '/agro-main.jpg']}
+        imgSrc="/agro-main.jpg"
+        imgSrcLow="/agro-main-low.jpg"
         left
         name="PARK MASZYN"
       />

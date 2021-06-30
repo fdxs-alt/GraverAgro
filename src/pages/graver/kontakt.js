@@ -5,7 +5,7 @@ const ContactPage = () => {
   return (
     <Layout title="Graver | Kontakt">
       <GraverNav />
-      <About name="Kontakt" imgSrc={['/onas_low.jpg', '/onas.jpg']} />
+      <About name="Kontakt" imgSrc="/onas.jpg" imgSrcLow="/onas_low.jpg" />
       <Contact />
       <GraverFooter />
     </Layout>

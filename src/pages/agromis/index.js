@@ -13,7 +13,7 @@ const Agro = () => {
   return (
     <Layout title="Agromiś" favicon="/agro-favicon">
       <AgroNav />
-      <About isMain imgSrc={['/agro-main-low.jpg', '/agro-main.jpg']} left>
+      <About isMain imgSrc="/agro-main.jpg" imgSrcLow="/agro-main-low.jpg" left>
         <AboutSection
           title="AGROMIŚ"
           smallHeading="PROFESJONALIZM W KAŻDYM DETALU"

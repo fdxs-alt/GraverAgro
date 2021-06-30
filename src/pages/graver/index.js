@@ -13,7 +13,7 @@ const Graver = () => {
   return (
     <Layout title="Graver">
       <GraverNav />
-      <About isMain imgSrc={['/onas_low.jpg', '/onas.jpg']}>
+      <About isMain imgSrc="/onas.jpg" imgSrcLow="/onas_low.jpg">
         <AboutSection
           title="GRAVER"
           smallHeading="MASZYNY TO NASZA PASJA!"

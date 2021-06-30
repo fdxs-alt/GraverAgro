@@ -13,7 +13,7 @@ const Gallery = ({ photos }) => {
   return (
     <Layout title="Graver | Galeria">
       <GraverNav />
-      <About name="Galeria" imgSrc={['/onas_low.jpg', '/onas.jpg']} />
+      <About name="Galeria" imgSrc="/onas.jpg" imgSrcLow="/onas_low.jpg" />
       <Realisations photos={photos} />
       <GraverFooter />
     </Layout>

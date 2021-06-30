@@ -11,7 +11,7 @@ const Services = () => {
   return (
     <Layout title="Graver | Usługi">
       <GraverNav />
-      <About name="Usługi" imgSrc={['/onas_low.jpg', '/onas.jpg']} />
+      <About name="Usługi" imgSrc="/onas.jpg" imgSrcLow="/onas_low.jpg" />
       <GraverServices />
       <GraverFooter />
     </Layout>

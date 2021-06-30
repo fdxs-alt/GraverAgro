@@ -7,7 +7,7 @@ const MachinesPark = ({ machines }) => {
   return (
     <Layout title="Graver | Park maszyn">
       <GraverNav />
-      <About name="Park maszyn" imgSrc={['/onas_low.jpg', '/onas.jpg']} />
+      <About name="Park maszyn" imgSrc="/onas.jpg" imgSrcLow="/onas_low.jpg" />
       <Machines machines={machines} />
       <GraverFooter />
     </Layout>
