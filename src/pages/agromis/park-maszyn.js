@@ -5,7 +5,11 @@ import { Layout, About, AgroNav, AgroFooter, Machines } from '@components'
 
 const MachinesPark = ({ machines }) => {
   return (
-    <Layout title="Agromiś | Park maszyn" favicon="/agro-favicon">
+    <Layout
+      title="Agromiś | Park maszyn"
+      favicon="/agro-favicon"
+      url="agromis/park-maszyn"
+    >
       <AgroNav />
       <About
         imgSrc="/agro-main.jpg"

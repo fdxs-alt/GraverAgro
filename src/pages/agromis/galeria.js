@@ -5,7 +5,11 @@ import { GALLERY_AGRO_QUERY } from '@graphql'
 
 const Gallery = ({ photos }) => {
   return (
-    <Layout title="Agromiś | Galeria" favicon="/agro-favicon">
+    <Layout
+      title="Agromiś | Galeria"
+      favicon="/agro-favicon"
+      url="agromis/galeria"
+    >
       <AgroNav />
       <About
         imgSrc="/agro-main.jpg"

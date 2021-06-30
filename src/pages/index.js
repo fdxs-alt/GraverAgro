@@ -12,7 +12,10 @@ const Home = () => {
   )
 
   return (
-    <Layout title="AGROMIŚ GRAVER | Wybierz usługę">
+    <Layout
+      title="AGROMIŚ i  GRAVER | Wybierz usługę"
+      description="Usługi firmy Agromiś oraz Graver"
+    >
       <Container>
         <Link href="/agromis">
           <Image

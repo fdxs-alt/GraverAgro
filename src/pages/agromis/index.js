@@ -11,7 +11,7 @@ import {
 
 const Agro = () => {
   return (
-    <Layout title="Agromiś" favicon="/agro-favicon">
+    <Layout title="Agromiś" favicon="/agro-favicon" url="agromis/">
       <AgroNav />
       <About isMain imgSrc="/agro-main.jpg" imgSrcLow="/agro-main-low.jpg" left>
         <AboutSection

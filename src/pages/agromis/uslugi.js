@@ -3,7 +3,11 @@ import { Layout, About, AgroNav, AgroFooter, AgroServices } from '@components'
 
 const Services = () => {
   return (
-    <Layout title="Agromiś | Usługi" favicon="/agro-favicon">
+    <Layout
+      title="Agromiś | Usługi"
+      favicon="/agro-favicon"
+      url="agromis/uslugi"
+    >
       <AgroNav />
       <About
         imgSrc="/agro-main.jpg"
