@@ -24,7 +24,7 @@ const data = [
   'FIRMA AGROMIŚ',
   'WALDERMAR MIŚKOWIEC',
   'Dobra 233, 34-222 Dobra',
-  'Tel: +48 669 308 372',
+  'Tel: +48 728 358 187',
 ]
 
 const AgroFooter = () => {
